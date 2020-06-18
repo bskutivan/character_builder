@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("images/background-4.jpg");
+}
+header {
+    padding: 20px 35px;  /*applies 20px to every side of teh box */
+    background-color:#0b8f9e;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+header h1 {
+    font-weight: bold;
+    font-size: 32px;
+    color: #9c3900;
+    margin:0;
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header a {
+    text-decoration: none;
+    color: rgb(145, 53, 1);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+header nav {
+    float:right; /*similar to text wrapping property in docs or word */
+    margin: 7px 0; /* margin adds space to the top and bottom and 0 represents the spaces to the right and left */
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+}
+header nav ul li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
