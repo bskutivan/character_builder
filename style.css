@@ -4,7 +4,8 @@
 }
 
 body{
-    background-image: url("images/background-4.jpg");
+    background-image: url("images/background-3.jpg");
+    background-size: 1500px;
 }
 header {
     padding: 20px 35px;  /*applies 20px to every side of teh box */
