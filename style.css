@@ -3,17 +3,29 @@
     padding: 0;
 }
 
-body{
-    background-image: url("images/background-1.jpg");
-    background-size: 1500px;
+header nav{
+    float:right;
+    margin: 7px 0;
+    display: inline;
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+    
 
 }
-header {
-    padding: 20px 35px;  /*applies 20px to every side of teh box */
-    background-color:#0b8f9e;
-    font-family: Arial, Helvetica, sans-serif;
 
+header{
+background-image: url("images/background-4.jpg");
+background-size: 1400px;
+height: 600px;
+background-size: cover;
+background-position: center;
+position: relative;
+padding: 20px 35px;  /*applies 20px to every side of teh box */
+background-color:#0b8f9e;
+font-family: Arial, Helvetica, sans-serif;
 }
+
 header h1 {
     font-weight: bold;
     font-size: 32px;
@@ -24,7 +36,7 @@ header h1 {
 }
 header a {
     text-decoration: none;
-    color: rgb(145, 53, 1);
+    color: rgb(173, 59, 6);
     font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -48,3 +60,60 @@ header nav ul li a {
 
 }
 
+.container{
+background-color: rgb(36, 1, 7);
+text-align: center;
+font-size: 35px;
+color: white;
+margin-top: 705px;
+padding: 0 100px 0px 100px;
+border-bottom: 3px solid;
+}
+.container, h2 {
+    color: rgb(151, 73, 73);
+}
+.container, p {
+    color: rgb(196, 169, 169);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hero-form {
+    border: 3px solid #000000;
+  background-color: #7a2126;
+  padding: 20px;
+  width: 500px;
+  color: #ffe1e1;
+  position: absolute;
+  bottom: -420px;
+  right: 450px;
+}
+.hero-form h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+  .hero-form p {
+    margin: 5px 0 15px 0;
+  }
+  
+  .hero-form input {
+    border: 1px solid #024e76;
+    display: block;
+    padding: 7px 2px;
+    font-size: 16px;
+    color: #024e76;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .hero-form label {
+    margin: 0 5px;
+  }
+  .hero-form button {
+    color: #f8f8f5;
+    background-color: #b86358;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    position: relative;
+    right: -140px;
+    }
+  
+    
