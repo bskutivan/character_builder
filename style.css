@@ -76,7 +76,7 @@ border-bottom: 3px solid;
     color: rgb(196, 169, 169);
     font-family: Arial, Helvetica, sans-serif;
 }
-.hero-form {
+/* .hero-form {
     border: 3px solid #000000;
   background-color: #7a2126;
   padding: 20px;
@@ -115,5 +115,18 @@ border-bottom: 3px solid;
     position: relative;
     right: -140px;
     }
-  
-    
+.hero-form button:hover {
+  background-color: pink;
+} */
+
+
+
+
+
+
+
+    @media screen and (max-width: 300px) {
+      .cancelbtn, .signupbtn {
+         width: 100%;
+      }
+    }
