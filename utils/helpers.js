@@ -49,6 +49,12 @@ function statModifiers(Num) {
     return modifier
 }
 
+function getspellBonus(stat, level) {
+    const statbonus = statModifiers(stat);
+    const profMod = proficiencyBonus(level);
+    return statbonus + profMod + 8;
+}
+
 function getHp(Con, Class) {
     const conMod = statModifiers(Con);
      var hp;
@@ -123,4 +129,57 @@ function(Class) {
     }
 })
 
-module.exports = {addProficientBonus, statModifiers, getHp, proficiencyBonus};
+handlebars.registerHelper("getRaceInfo", function(Race) {
+    
+})
+
+handlebars.registerHelper("ClassSavingThrows", function(Class) {
+    if (Class === "Wizard") {
+    } else if (Class === "Fighter") {
+        return `
+        
+        `;
+    } else if (Class === "Bard") {
+        return `
+        
+        `;
+    } else if (Class === "Sorcerer") {
+        return `
+        
+        `;
+    } else if (Class === "Druid") {
+        return `
+        
+        `;
+    } else if (Class === "Rogue") {
+        return `
+        
+        `;
+    } else if (Class === "Warlock") {
+        return `
+        
+        `;
+    } else if (Class === "Monk") {
+        return `
+        
+        `;
+    } else if (Class === "Ranger") {
+        return `
+        
+        `;
+    } else if (Class === "Barbarian") {
+        return `
+        
+        `;
+    } else if (Class === "Cleric") {
+        return `
+        
+        `;
+    } else if (Class === "Paladin") {
+        return `
+        
+        `;
+    }
+})
+
+module.exports = {addProficientBonus, statModifiers, getHp, proficiencyBonus, getspellBonus };
