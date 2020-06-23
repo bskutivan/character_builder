@@ -108,6 +108,13 @@ Skills.init(
                 model: 'character',
                 key: 'id'
             }
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
         }
     },
     {
@@ -117,3 +124,5 @@ Skills.init(
         modelName: 'skills'
     }
 )
+
+module.exports = Skills;
