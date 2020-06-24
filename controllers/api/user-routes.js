@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
+// const bcrypt = require('bcrypt');
 
 
 // GET all users
@@ -41,11 +42,13 @@ router.post('/login', (req, res) => {
         }
     }).then(dbUserData => {
         if (!dbUserData) {
+            
             res.status(400).json({ message: 'No user with that username! '});
             return;
         }
-
         // Verify user
+        // bcrypt.compare()
+
 
         const validPassword = dbUserData.checkPassword(req.body.password);
         if(!validPassword) {
