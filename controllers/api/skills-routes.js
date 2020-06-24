@@ -97,6 +97,36 @@ router.put('/:id', withAuth, (req, res) => {
             }
         }
     )
+    .then(dbSkillsData => {
+        if(!dbSkillsData) {
+            res.status(404).json({ message: 'No skills found with this id '});
+            return;
+        }
+        res.json(dbSkillsData)
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+router.delete('/:id', withAuth, (req, res) => {
+    Skills.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbSkillsData => {
+        if(!dbSkillsData) {
+            res.status(404).json({ message: 'No skills found with this id '});
+            return;
+        }
+        res.json(dbSkillsData)
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 })
 
 module.exports = router;
