@@ -44,7 +44,7 @@ router.get('/', (req, res) => {
 });
 
 //GET a single character
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
 
     Character.findOne({
        where: {
