@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    {{!-- <link rel="stylesheet" href="style.css">
-    <link rel='icon' href='./images/favicon.ico' type='image/x-icon'/ > --}}
+    <link rel="stylesheet" href="./stylesheets/{{style}}">
+    <link rel='icon' href='./images/favicon.ico' type='image/x-icon'/>
     <title>D&D</title>
 </head>
 <body>
@@ -18,10 +18,10 @@
            <ul class="flex flex-wrap space-x-4">
            <li>
              <!-- Anchor element -->
-             <a href="sign up.html">Login</a>
+             <a href="/login">Login</a>
            </li>
            <li>
-             <a href="dash.html">Dashboard</a>
+             <a href="/dashboard">Dashboard</a>
            </li>
            <li>
              <a href="#about">About</a>
@@ -34,11 +34,13 @@
        </header>
 
  <main class="bg-red-800">
-   <h1 class="font-black text-center text-3xl text-white">Character:</h1>
+   <h1 class="font-black text-center text-3xl text-white">Characters:</h1>
     <div class="p-8">
      {{{body}}}
     </div>
  </main>
+
+ 
 
 <!--ABOUT-->
  <section id="about">
@@ -53,7 +55,7 @@
 
 </section>
 
-{{!-- <script src="home.js"></script>
-<script src="index.js"></script> --}}
+<script src="/javascript/home.js"></script>
+<script src="/javascript/index.js"></script>
 </body>
 </html>

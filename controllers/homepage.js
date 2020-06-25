@@ -1,5 +1,47 @@
 const router = require('express').Router();
-const {Character} = require('../models')
+const {Character, User } = require('../models')
+
+//render homepage
+router.get('/', (req, res) => {
+    Character.findAll({
+        attributes: [
+            'charName',
+            'charRace',
+            'charClass',
+            'created_at'
+        ],
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(dbCharacterData => {
+        const characters = dbCharacterData.map(character => character.get({ plain: true }));
+        res.render('homepage', {
+            characters,
+            loggedIn: req.session.loggedIn,
+            style: 'style.css'
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+//render login/signup
+router.get('/login', (req, res) => {
+    if(req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('login', {
+        style: 'login.css'
+    });
+});
 
 router.get('/:id',(req, res) => {
     Character.findOne({
