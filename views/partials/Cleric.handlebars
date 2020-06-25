@@ -1,0 +1,83 @@
+        <table>
+            <tr> 
+                <td>{{ getSpellSave 1 character.charWis }}</td>
+                <td>{{ getSpellAttack 1 character.charWis }}</td>
+            </tr>
+            <tr>
+                <th>Spell Save</th>
+                <th>Spell Attack</th>
+            </tr>
+
+        </table>
+<table>
+    <tr>
+        <td>{{ statModifiers character.charStr}}</td>
+        <td>{{ statModifiers character.charDex}}</td>
+        <td>{{ statModifiers character.charCon}}</td>
+        <td>{{ statModifiers character.charInt}}</td>
+        <td>{{ addProficientBonus character.charWis 1}}</td>
+        <td>{{ addProficientBonus character.charCha 1}}</td>
+    </tr>
+    <tr>
+        <th>STR</th>
+        <th>DEX</th>
+        <th>CON</th>
+        <th>INT</th>
+        <th>WIS</th>
+        <th>CHA</th>
+    </tr>
+</table>
+<h2> Class Proficiencies </h2>
+    <p>Armor: Light armor, medium armor, shields</p>
+    <p>Weapons: Simple weapons</p>
+    <p>Tools: None</p>
+    <p>Saving Throws: Wisdom, Charisma</p>
+    <p>Skills: Choose two from History, Insight, Medicine, Persuasion, and Religion</p>
+
+<h2> Class Features </h2>
+
+<h3> Spellcasting </h3>
+    <p>As a conduit for divine power, you can cast cleric spells.</p>
+
+<h4> Cantrips </h4>
+    <p>At 1st level, you know three cantrips of your choice from the cleric spell list.</p>
+    <p>You learn additional cleric cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Cleric table.</p>
+<h4> Preparing and Casting Spells </h4>
+    <p>The Cleric table shows how many spell slots you have to cast your spells of 1st level and higher.</p>
+    <p>To cast one of these spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.</p>
+
+    <p>You prepare the list of cleric spells that are available for you to cast, choosing from the cleric spell list.</p>
+    <p>When you do so, choose a number of cleric spells equal to your Wisdom modifier + your cleric level (minimum of one spell). The spells must be of a level for which you have spell slots.</p>
+
+    <p>For example, if you are a 3rd-level cleric, you have four 1st-level and two 2nd-level spell slots.</p>
+    <p>With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination.</p>
+    <p>If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn’t remove it from your list of prepared spells.</p>
+
+    <p>You can change your list of prepared spells when you finish a long rest.</p>
+    <p>Preparing a new list of cleric spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list.</p>
+
+<h4> Spellcasting Ability </h4>
+    <p>The power of your spells comes from your devotion to your deity.</p>
+    <p>You use your Wisdom whenever a cleric spell refers to your spellcasting ability.</p>
+    <p>In addition, you use your Wisdom modifier when setting the saving throw DC for a cleric spell you cast and when making an attack roll with one.</p>
+
+    <p>Spell save DC = 8 + your proficiency bonus + your Wisdom modifier</p>
+
+    <p>Spell attack modifier = your proficiency bonus + your Wisdom modifier</p>
+
+<h4> Ritual Casting </h4>
+    <p> You can cast a cleric spell as a ritual if that spell has the ritual tag and you have the spell prepared. </p>
+
+<h4> Spellcasting Focus </h4>
+    <p>You can use a holy symbol (see Equipment) as a spellcasting focus for your cleric spells. </p>
+
+<h3> Divine Domain </h3>
+    <p>Choose one domain related to your deity. Your chosen domain grants you domain spells and other features when you choose it at 1st level. </p>
+    <p>It also grants you additional ways to use Channel Divinity when you gain that feature at 2nd level, and additional benefits at 6th, 8th, and 17th levels.</p>
+
+    <h4> Domain spells <h4>
+    <p>Each domain has a list of spells—its domain spells— that you gain at the cleric levels noted in the domain description.</p>
+    <p>Once you gain a domain spell, you always have it prepared, and it doesn’t count against the number of spells you can prepare each day.</p>
+
+    <p>If you have a domain spell that doesn’t appear on the cleric spell list, the spell is nonetheless a cleric spell for you</p>
+

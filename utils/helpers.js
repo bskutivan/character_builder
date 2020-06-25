@@ -1,4 +1,4 @@
-const handlebars = require('handlebars')
+const handlebars = require('handlebars');
 
 function addProficientBonus (stat, level) {
     const statmod = statModifiers(stat);
@@ -49,12 +49,6 @@ function statModifiers(Num) {
     return modifier
 }
 
-function getspellBonus(stat, level) {
-    const statbonus = statModifiers(stat);
-    const profMod = proficiencyBonus(level);
-    return statbonus + profMod + 8;
-}
-
 function getHp(Con, Class) {
     const conMod = statModifiers(Con);
      var hp;
@@ -71,115 +65,222 @@ function getHp(Con, Class) {
  
      return hp;
 }
-handlebars.registerHelper( "getClassInfo",
-function(Class) {
-    if (Class === "Wizard") {
-        return`
-        <div class="Proficiencies">
-            <h2>Class Proficiencies</h2>
-                <p><span>Armor:</span> None</p>
-                <p><span>Weapons:</span> Daggers, darts, slings, quarterstaffs, light crossbows</p>
-                <p><span>Tools:</span> None</p>
-                <p><span>Saving Throws:</span> Intelligence, Wisdom</p>
-                <p><span>Skills:</span> Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion</p>
-        </div>
-        <div class="Features">
-            <h2>Class Features<h2>
-                <h3>Spellcasting</h3>
-                    <p>As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power.</p>
-                <h5>Cantrips</h5>
-                    <p>At 1st level, you know three cantrips of your choice from the wizard spell list.</p>
-                    <p>You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table.</p>
 
-                <h5>Spellbook</h5>
-                    <p>At 1st level, you have a spellbook containing six 1st- level wizard spells of your choice.</p>
-                    <p>Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind.</p>
-                <h5>Preparing and Casting Spells</h5>
-                    <p>Table: The Wizard shows how many spell slots you have to cast your spells of 1st level and higher.
-                    <p>To cast one of these spells, you must expend a slot of the spell’s level or higher.
-                    <p>You regain all expended spell slots when you finish a long rest.
-                    <p>You prepare the list of wizard spells that are available for you to cast.
-                    <p>To do so, choose a number of wizard spells from your spellbook equal to your Intelligence modifier + your wizard level (minimum of one spell). The spells must be of a level for which you have spell slots.</p>
-                    <p>You can change your list of prepared spells when you finish a long rest. Preparing a new list of wizard spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list.</p>
+function getSpellSave(level, stat){
+    const profBonus = proficiencyBonus(level);
+    const statMod = statModifiers(stat);
+    var spellSave = 8 + profBonus + statMod;
+    return spellSave;
+}
 
-        </div>
-        `;
-    } else if (Class === "Fighter") {
-        return ``;
-    } else if (Class === "Bard") {
-        return ``;
-    } else if (Class === "Sorcerer") {
-        return ``;
-    } else if (Class === "Druid") {
-        return ``;
-    } else if (Class === "Rogue") {
-        return ``;
-    } else if (Class === "Warlock") {
-        return ``;
-    } else if (Class === "Monk") {
-        return ``;
-    } else if (Class === "Ranger") {
-        return ``;
-    } else if (Class === "Barbarian") {
-        return ``;
-    } else if (Class === "Cleric") {
-        return ``;
-    } else if (Class === "Paladin") {
-        return ``;
-    }
-})
+function getSpellAttack(level, stat){
+    const profBonus = proficiencyBonus(level);
+    const statMod = statModifiers(stat);
+    var spellAttack = profBonus + statMod;
+    return spellAttack;
+}
 
 handlebars.registerHelper("getRaceInfo", function(Race) {
+    if (Race === "Dwarf") {
+        return `
+        <h2> ${Race} Info </h2>
+        <p><span>Ability Score Increase: Your Constitution score increases by 2.
+
+        <p><span>Age:</span> Dwarves mature at the same rate as humans, but they’re considered young until they reach the age of 50. On average, they live about 350 years.</p>
+        
+        <p><span>Alignment:</span> Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order.</p>
+        
+        <p><span>Size:</span> Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.</p>
+        
+        <p><span>Speed:</span> Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.</p>
+        
+        <p><span>Darkvision:</span> Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+        
+        <p><span>Dwarven Resilience:</span> You have advantage on saving throws against poison, and you have resistance against poison damage.</p>
+        
+        <p><span>Dwarven Combat Training:</span> You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.</p>
+        
+        <p><span>Tool Proficiency:</span> You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.</p>
+        
+        <p><span>Stonecunning:</span> Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.</p>
+        
+        <p><span>Languages:</span> You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.</p>
+        `
+    } else if (Race === "Elf") {
+        return `
+        <h2> ${Race} Info </h2>
+            <p><span>Ability Score Increase:</span> Your Dexterity score increases by 2.</p>
+
+            <p><span>Age:</span> Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.</p>
+            
+            <p><span>Alignment:</span> Elves love freedom, variety, and self- expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others’ freedom as well as their own, and they are more often good than not. The drow are an exception; their exile has made them vicious and dangerous. Drow are more often evil than not.</p>
+            
+            <p><span>Size:</span> Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.</p>
+            
+            <p><span>Speed:</span> Your base walking speed is 30 feet.</p>
+            
+            <p><span>Darkvision:</span> Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+            
+            <p><span>Keen Senses:</span> You have proficiency in the Perception skill.</p>
+            
+            <p><span>Fey Ancestry:</span> You have advantage on saving throws against being charmed, and magic can’t put you to sleep.</p>
+            
+            <p><span>Trance:</span> Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.</p>
+            
+            <p><span>Languages:</span> You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.</p>
+        `
+    } else if (Race === "Halfling") {
+        return `
+        <h2> ${Race} Info </h2>
+        <p><span>Ability Score Increase:</span> Your Dexterity score increases by 2.</p>
+
+        <p><span>Age:</span> A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.</p>
+            
+        <p><span>Alignment:</span> Most halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of their old ways.</p>
+            
+        <p><span>Size:</span> Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small.</p>
+            
+        <p><span>Speed:</span> Your base walking speed is 25 feet.</p>
+            
+        <p><span>Lucky:</span> When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.</p>
+            
+        <p><span>Brave:</span> You have advantage on saving throws against being frightened.</p>
+            
+        <p><span>Halfling Nimbleness:</span> You can move through the space of any creature that is of a size larger than yours.</p>
+            
+        <p><span>Languages:</span> You can speak, read, and write Common and Halfling. The Halfling language isn’t secret, but halflings are loath to share it with others. They write very little, so they don’t have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling.</p>
+        `
+    } else if (Race === "Human") {
+        return `
+        <h2> ${Race} Info </h2>
+            Ability Score Increase: Your ability scores each increase by 1.
+
+            Age: Humans reach adulthood in their late teens and live less than a century.
+        
+            Alignment: Humans tend toward no particular alignment. The best and the worst are found among them.
+        
+            Size: Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.
+        
+            Speed: Your base walking speed is 30 feet.
+        
+            Languages: You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.
+        `
+    } else if (Race === "Dragonborn") {
+        return `
+        <h2> ${Race} Info </h2>
+            Ability Score Increase: Your Strength score increases by 2, and your Charisma score increases by 1.
+
+            Age: Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.
+
+            Alignment: Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil. Most dragonborn are good, but those who side with evil can be terrible villains.
+
+            Size: Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.
+
+            Speed: Your base walking speed is 30 feet.
+
+            Draconic Ancestry: You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.
+
+            Breath Weapon: You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.
+
+            When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+
+            Table: Draconic Ancestry
+            Dragon	Damage Type	Breath Weapon
+            Black	Acid	5 by 30 ft. line (Dex. save)
+            Blue	Lightning	5 by 30 ft. line (Dex. save)
+            Brass	Fire	5 by 30 ft. line (Dex. save)
+            Bronze	Lightning	5 by 30 ft. line (Dex. save)
+            Copper	Acid	5 by 30 ft. line (Dex. save)
+            Gold	Fire	15 ft. cone (Dex. save)
+            Green	Poison	15 ft. cone (Con. save)
+            Red	Fire	15 ft. cone (Dex. save)
+            Silver	Cold	15 ft. cone (Con. save)
+            White	Cold	15 ft. cone (Con. save)
+            After you use your breath weapon, you can’t use it again until you complete a short or long rest.
+
+            Damage Resistance: You have resistance to the damage type associated with your draconic ancestry.
+
+            Languages: You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.
+        `
+    } else if (Race === "Half-Elf") {
+        return `
+        <h2> ${Race} Info </h2>
+            Ability Score Increase: Your Charisma score increases by 2, and two other ability scores of your choice increase by 1.
+
+            Age: Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years.
+            
+            Alignment: Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others’ demands, and sometimes prove unreliable, or at least unpredictable.
+            
+            Size: Half-elves are about the same size as humans, ranging from 5 to 6 feet tall. Your size is Medium.
+            
+            Speed: Your base walking speed is 30 feet.
+            
+            Darkvision: Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+            
+            Fey Ancestry: You have advantage on saving throws against being charmed, and magic can’t put you to sleep.
+            
+            Skill Versatility: You gain proficiency in two skills of your choice.
+            
+            Languages: You can speak, read, and write Common, Elvish, and one extra language of your choice.
+        `
+    } else if (Race === "Half-Orc") {
+        return `
+        <h2> ${Race} Info </h2>
+            Ability Score Increase: Your Strength score increases by 2, and your Constitution score increases by 1.
+            Age: Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.
+            Alignment: Half-orcs inherit a tendency toward chaos from their orc parents and are not strongly inclined toward good. Half-orcs raised among orcs and willing to live out their lives among them are usually evil.
+            Size: Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.
+            Speed: Your base walking speed is 30 feet.
+            Darkvision: Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+            Menacing: You gain proficiency in the Intimidation skill.
+            Relentless Endurance: When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest.
+            Savage Attacks: When you score a critical hit with a melee weapon attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit.
+            Languages: You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.
+        `
+    } else if (Race === "Tiefling") {
+        return `
+        <h2> ${Race} Info </h2>
+            Ability Score Increase: Your Intelligence score increases by 1, and your Charisma score increases by 2.
+
+            Age: Tieflings mature at the same rate as humans but live a few years longer.
+            
+            Alignment: Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent nature inclines many tieflings toward a chaotic alignment.
+            
+            Size: Tieflings are about the same size and build as humans. Your size is Medium.
+            
+            Speed: Your base walking speed is 30 feet.
+            
+            Darkvision: Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+            
+            Hellish Resistance: You have resistance to fire damage.
+            
+            Infernal Legacy. You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.
+            
+            Languages: You can speak, read, and write Common and Infernal.
+        `
+    } else if (Race === "Gnome") {
+        return `
+        <h2> ${Race} Info </h2>
+            Ability Score Increase: Your Intelligence score increases by 2.
+
+            Age: Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.
+            
+            Alignment: Gnomes are most often good. Those who tend toward law are sages, engineers, researchers, scholars, investigators, or inventors. Those who tend toward chaos are minstrels, tricksters, wanderers, or fanciful jewelers. Gnomes are good-hearted, and even the tricksters among them are more playful than vicious.
+            
+            Size: Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.
+            
+            Speed: Your base walking speed is 25 feet.
+            
+            Darkvision: Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.
+            
+            Gnome Cunning: You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.
+            
+            Languages: You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.
+        `
+    }
+    
     
 })
 
-handlebars.registerHelper("ClassSavingThrows", function(Class) {
-    if (Class === "Wizard") {
-    } else if (Class === "Fighter") {
-        return `
-        
-        `;
-    } else if (Class === "Bard") {
-        return `
-        
-        `;
-    } else if (Class === "Sorcerer") {
-        return `
-        
-        `;
-    } else if (Class === "Druid") {
-        return `
-        
-        `;
-    } else if (Class === "Rogue") {
-        return `
-        
-        `;
-    } else if (Class === "Warlock") {
-        return `
-        
-        `;
-    } else if (Class === "Monk") {
-        return `
-        
-        `;
-    } else if (Class === "Ranger") {
-        return `
-        
-        `;
-    } else if (Class === "Barbarian") {
-        return `
-        
-        `;
-    } else if (Class === "Cleric") {
-        return `
-        
-        `;
-    } else if (Class === "Paladin") {
-        return `
-        
-        `;
-    }
-})
 
-module.exports = {addProficientBonus, statModifiers, getHp, proficiencyBonus, getspellBonus };
+module.exports = {addProficientBonus, statModifiers, getHp, proficiencyBonus, getspellBonus, getSpellSave, getSpellAttack};

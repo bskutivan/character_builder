@@ -25,6 +25,10 @@
     "express-handlebars": "^4.0.4",
     "express-session": "^1.17.1",
     "mysql2": "^2.1.0",
+<<<<<<< HEAD
     "sequelize": "^5.22.0"
+=======
+    "sequelize": "^5.21.13"
+>>>>>>> d401087e2b2473ebc533409748af011b8b04c9d0
   }
 }
