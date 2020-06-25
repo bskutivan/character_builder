@@ -15,8 +15,8 @@ router.get('/:id',(req, res) => {
         const character = dbData.get({plain: true});
         if(character.charClass === "Wizard") {
             res.render('Character', {character: character, Wizard: true});
-        } else {
-            console.log("quack")
+        } else if (character.charClass === "Bard") {
+            res.render('Character', {character: character, Bard: true});
         }
 
     })

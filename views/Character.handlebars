@@ -61,6 +61,10 @@
                 <td>{{ statModifiers character.charCha }}</td>
             </tr>
         </table>
+        <div>
+            <h4>Initiative</h4>
+            <p>{{ statModifiers character.charDex }}</p>
+        </div>
         <table>
             <tr>
                 <td>{{ addProficientBonus character.charStr 1 }}</td>
@@ -71,11 +75,55 @@
                 <th>Attack Bonus(Finesse)</th>
             </tr>
         </table>
-        <div>
+            {{#if Barbarian}}
+            {{> Barbarian}}
+            {{/if}}
+
+            {{#if Bard}}
+            {{> Bard}}
+            {{/if}}
+
+            {{#if Cleric}}
+            {{> Cleric}}
+            {{/if}}
+
+            {{#if Druid}}
+            {{> Druid}}
+            {{/if}}
+
+            {{#if Fighter}}
+            {{> Fighter}}
+            {{/if}}
+
+            {{#if Monk}}
+            {{> Monk}}
+            {{/if}}
+
+            {{#if Paladin}}
+            {{> Paladin}}
+            {{/if}}
+
+            {{#if Ranger}}
+            {{> Ranger}}
+            {{/if}}
+
+            {{#if Rogue}}
+            {{> Rouge}}
+            {{/if}}
+
+            {{#if Sorcerer}}
+            {{> Sorcerer}}
+            {{/if}}
+
+            {{#if Warlock}}
+            {{> Warlock}}
+            {{/if}}
+
             {{#if Wizard}}
             {{> Wizard}}
             {{/if}}
-        </div>
+
+
         <div>
             {{#getRaceInfo charRace}}
             {{/getRaceInfo}}
