@@ -283,4 +283,4 @@ handlebars.registerHelper("getRaceInfo", function(Race) {
 })
 
 
-module.exports = {addProficientBonus, statModifiers, getHp, proficiencyBonus, getspellBonus, getSpellSave, getSpellAttack};
+module.exports = {addProficientBonus, statModifiers, getHp, proficiencyBonus, getSpellSave, getSpellAttack};

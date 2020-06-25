@@ -1,7 +1,7 @@
 <section class="character-sheet">
     <div class="character-info">
         <table>
-            <tr>
+            <tr class="text-center space-x-4">
                 <td>{{ character.charName }}</td>
                 <td>{{ character.charRace }}</td>
                 <td>{{ character.charClass }}</td>
@@ -15,7 +15,7 @@
             </tr>
         </table>
         <table>
-            <tr>
+            <tr class="text-center">
                 <td>{{ getHp character.charCon character.charClass }}</td>
                 <td>{{ proficiencyBonus 1 }}</td>
                 <td>{{ statModifiers character.charDex }}</td>
@@ -32,32 +32,32 @@
                 <th>Score</th>
                 <th>Modifiers</th>
             </tr>
-            <tr>
+            <tr class="text-center">
                 <td>Strength:</td>
                 <td>{{ character.charStr }}</td>
                 <td>{{ statModifiers character.charStr }}</td>
             </tr>
-            <tr>
+            <tr class="text-center">
                 <td>Dexterity:</td>
                 <td>{{ character.charDex }}</td>
                 <td>{{ statModifiers character.charDex }}</td>
             </tr>
-            <tr>
+            <tr class="text-center">
                 <td>Constitution:</td>
                 <td>{{ character.charCon }}</td>
                 <td>{{ statModifiers character.charCon }}</td>
             </tr>
-            <tr>
+            <tr class="text-center">
                 <td>Intelligence:</td>
                 <td>{{ character.charInt }}</td>
                 <td>{{ statModifiers character.charInt }}</td>
             </tr>
-            <tr>
+            <tr class="text-center">
                 <td>Wisdom:</td>
                 <td>{{ character.charWis }}</td>
                 <td>{{ statModifiers character.charWis }}</td>
             </tr>
-            <tr>
+            <tr class="text-center">
                 <td>Charisma</td>
                 <td> {{ character.charCha }} </td>
                 <td>{{ statModifiers character.charCha }}</td>
