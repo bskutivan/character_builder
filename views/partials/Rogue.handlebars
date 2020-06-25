@@ -1,44 +1,56 @@
-<table>
-    <tr>
-        <td>{{ statModifiers character.charStr}}</td>
-        <td>{{ addProficientBonus character.charDex 1}}</td>
-        <td>{{ statModifiers character.charCon}}</td>
-        <td>{{ addProficientBonus character.charInt 1}}</td>
-        <td>{{ statModifiers character.charWis}}</td>
-        <td>{{ statModifiers character.charCha}}</td>
-    </tr>
-    <tr>
-        <th>STR</th>
-        <th>DEX</th>
-        <th>CON</th>
-        <th>INT</th>
-        <th>WIS</th>
-        <th>CHA</th>
-    </tr>
-</table>
-<h2> Class Proficiencies </h2>
-<p>Armor:</p> Light armor
-<p>Weapons:</p> Simple weapons, hand crossbows, longswords, rapiers, shortswords
-<p>Tools:</p> Thieves’ tools
-<p>Saving Throws:</p> Dexterity, Intelligence
-<p>Skills:</p> Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth
+    <div>
+        <h2  class="font-black text-center text-lg">Saves</h2>
+        <table class="flex justify-center">
+            <tr class="text-center">
+                <td class="w-16">{{ statModifiers character.charStr}}</td>
+                <td class="w-16">{{ addProficientBonus character.charDex 1}}</td>
+                <td class="w-16">{{ statModifiers character.charCon}}</td>
+                <td class="w-16">{{ addProficientBonus character.charInt 1}}</td>
+                <td class="w-16">{{ statModifiers character.charWis}}</td>
+                <td class="w-16">{{ statModifiers character.charCha}}</td>
+            </tr>
+            <tr>
+                <th class="w-16">STR</th>
+                <th class="w-16">DEX</th>
+                <th class="w-16">CON</th>
+                <th class="w-16">INT</th>
+                <th class="w-16">WIS</th>
+                <th class="w-16">CHA</th>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="grid grid-cols-2 col-gap-2 mt-8">
+    <div class="Features shadow-xl p-4 bg-white">
+        <h2 class="font-black text-center text-xl"> Class Features </h2>
 
-<h2> Class Features </h2>
+        <h3 class="font-black text-lg m-2 border-b border-black">Expertise</h3>
+            <p> At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves’ tools.</p>
+            <p> Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.</p>
 
-<h3>Expertise</h3>
-    <p> At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves’ tools.</p>
-    <p> Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.</p>
+            <p> At 6th level, you can choose two more of your proficiencies (in skills or with thieves’ tools) to gain this benefit.</p>
 
-    <p> At 6th level, you can choose two more of your proficiencies (in skills or with thieves’ tools) to gain this benefit.</p>
+        <h3 class="font-black text-lg m-2 border-b border-black"> Sneak Attack </h3>
+            <p> Beginning at 1st level, you know how to strike subtly and exploit a foe’s distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll.</p>
+            <p> The attack must use a finesse or a ranged weapon.</p>
 
-<h3> Sneak Attack </h3>
-    <p> Beginning at 1st level, you know how to strike subtly and exploit a foe’s distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll.</p>
-    <p> The attack must use a finesse or a ranged weapon.</p>
+            <p>You don’t need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn’t incapacitated, and you don’t have disadvantage on the attack roll.<p>
 
-    <p>You don’t need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn’t incapacitated, and you don’t have disadvantage on the attack roll.<p>
+        <h3 class="font-black text-lg m-2 border-b border-black"> Thieves' Cant </h3>
+            <p> During your rogue training you learned thieves’ cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation.</p>
+            <p> Only another creature that knows thieves’ cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.</p>
 
-<h3> Thieves' Cant </h3>
-    <p> During your rogue training you learned thieves’ cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation.</p>
-    <p> Only another creature that knows thieves’ cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.</p>
+            <p> In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves’ guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.</p>
 
-    <p> In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves’ guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.</p>
+    </div>
+    <div class="shadow-xl p-4 bg-white">
+        <div class="Proficiencies mb-5 ">
+            <h2 class="font-black text-center text-lg border-b border-black"> Class Proficiencies </h2>
+                <p><span class="font-black">Armor:</span> Light armor</p>
+                <p><span class="font-black">Weapons:</span> Simple weapons, hand crossbows, longswords, rapiers, shortswords</p>
+                <p><span class="font-black">Tools:</span> Thieves’ tools</p>
+                <p><span class="font-black">Saving Throws:</span> Dexterity, Intelligence</p>
+                <p><span class="font-black">Skills:</span> Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth</p>
+        </div>
+
+

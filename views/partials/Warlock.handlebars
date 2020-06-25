@@ -1,73 +1,86 @@
-        <table>
-            <tr> 
-                <td>{{ getSpellSave 1 character.charCha }}</td>
-                <td>{{ getSpellAttack 1 character.charCha }}</td>
+    <table>
+    <tr class="text-center"> 
+            <td>{{ getSpellSave 1 character.charCha }}</td>
+            <td>{{ getSpellAttack 1 character.charCha }}</td>
+        </tr>
+        <tr>
+            <th>Spell Save</th>
+            <th>Spell Attack</th>
+        </tr>
+
+    </table>
+    <div>
+        <h2  class="font-black text-center text-lg">Saves</h2>
+        <table class="flex justify-center">
+            <tr class="text-center">
+                <td class="w-16">{{ statModifiers character.charStr}}</td>
+                <td class="w-16">{{ statModifiers character.charDex}}</td>
+                <td class="w-16">{{ statModifiers character.charCon}}</td>
+                <td class="w-16">{{ statModifiers character.charInt}}</td>
+                <td class="w-16">{{ addProficientBonus character.charWis 1}}</td>
+                <td class="w-16">{{ addProficientBonus character.charCha 1}}</td>
             </tr>
             <tr>
-                <th>Spell Save</th>
-                <th>Spell Attack</th>
+                <th class="w-16">STR</th>
+                <th class="w-16">DEX</th>
+                <th class="w-16">CON</th>
+                <th class="w-16">INT</th>
+                <th class="w-16">WIS</th>
+                <th class="w-16">CHA</th>
             </tr>
-
         </table>
-<table>
-    <tr>
-        <td>{{ statModifiers character.charStr}}</td>
-        <td>{{ statModifiers character.charDex}}</td>
-        <td>{{ statModifiers character.charCon}}</td>
-        <td>{{ statModifiers character.charInt}}</td>
-        <td>{{ addProficientBonus character.charWis 1}}</td>
-        <td>{{ addProficientBonus character.charCha 1}}</td>
-    </tr>
-    <tr>
-        <th>STR</th>
-        <th>DEX</th>
-        <th>CON</th>
-        <th>INT</th>
-        <th>WIS</th>
-        <th>CHA</th>
-    </tr>
-</table>
-<h2> Class Proficiencies </h2>
-    <p>Weapons: Simple weapons</p>
-    <p>Tools: None</p>
-    <p>Saving Throws: Wisdom, Charisma</p>
-    <p>Skills: Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion</p>
-    <p>Armor: Light armor</p>
+    </div>
+</div>
+<div class="grid grid-cols-2 col-gap-2 mt-8">
+    <div class="Features shadow-xl p-4 bg-white">
+        <h2 class="font-black text-center text-xl"> Class Features </h2>
 
-<h2> Class Features </h2>
+        <h3 class="font-black text-lg m-2 border-b border-black"> Otherwordly Patron </h3>
+            <p>At 1st level, you have struck a bargain with an otherworldly being of your choice.</p>
 
-<h3> Otherwordly Patron </h3>
-    <p>At 1st level, you have struck a bargain with an otherworldly being of your choice.</p>
+            <p>Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.</p>
 
-    <p>Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.</p>
+            <p>The beings that serve as patrons for warlocks are mighty inhabitants of other planes of existence—not gods, but almost godlike in their power.
+            <p>Various patrons give their warlocks access to different powers and invocations, and expect significant favors in return.</p>
+            <p>Some patrons collect warlocks, doling out mystic knowledge relatively freely or boasting of their ability to bind mortals to their will.</p>
+            <p>Other patrons bestow their power only grudgingly, and might make a pact with only one warlock.</p>
+            <p>Warlocks who serve the same patron might view each other as allies, siblings, or rivals.</p>
 
-    <p>The beings that serve as patrons for warlocks are mighty inhabitants of other planes of existence—not gods, but almost godlike in their power.
-    <p>Various patrons give their warlocks access to different powers and invocations, and expect significant favors in return.</p>
-    <p>Some patrons collect warlocks, doling out mystic knowledge relatively freely or boasting of their ability to bind mortals to their will.</p>
-    <p>Other patrons bestow their power only grudgingly, and might make a pact with only one warlock.</p>
-    <p>Warlocks who serve the same patron might view each other as allies, siblings, or rivals.</p>
+        <h3 class="font-black text-lg m-2 border-b border-black"> Pact Magic </h3>
+            <p>Your arcane research and the magic bestowed on you by your patron have given you facility with spells.</p>
 
-<h3> Pact Magic </h3>
-    <p>Your arcane research and the magic bestowed on you by your patron have given you facility with spells.</p>
+            <h4 class="m-2 font-black border-b border-black">Cantrips</h4>
+                <p>You know two cantrips of your choice from the warlock spell list.</p>
+                <p>You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.</p>
 
-    <h4>Cantrips</h4>
-        <p>You know two cantrips of your choice from the warlock spell list.</p>
-        <p>You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.</p>
+            <h4 class="m-2 font-black border-b border-black">Spell Slots</h4>
+                <p>Table: The Warlock shows how many spell slots you have. The table also shows what the level of those slots is; all of your spell slots are the same level.</p>
+                <p>To cast one of your warlock spells of 1st level or higher, you must expend a spell slot.</p>
+                <p>You regain all expended spell slots when you finish a short or long rest.</p>
+                <p>For example, when you are 5th level, you have two 3rd-level spell slots.</p>
+                <p>To cast the 1st-level spell thunderwave, you must spend one of those slots, and you cast it as a 3rd-level spell.</p>
 
-    <h4>Spell Slots</h4>
-        <p>Table: The Warlock shows how many spell slots you have. The table also shows what the level of those slots is; all of your spell slots are the same level.</p>
-        <p>To cast one of your warlock spells of 1st level or higher, you must expend a spell slot.</p>
-        <p>You regain all expended spell slots when you finish a short or long rest.</p>
-        <p>For example, when you are 5th level, you have two 3rd-level spell slots.</p>
-        <p>To cast the 1st-level spell thunderwave, you must spend one of those slots, and you cast it as a 3rd-level spell.</p>
+            <h4 class="m-2 font-black border-b border-black">Spellcasting Ability</h4>
+                <p>At 1st level, you know two 1st-level spells of your choice from the warlock spell list.</p>
+                <p>The Spells Known column of Table: The Warlock shows when you learn more warlock spells of your choice of 1st level and higher.</p>
+                <p>A spell you choose must be of a level no higher than what’s shown in the table’s Slot Level column for your level.</p>
+                <p>When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level. Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.</p>
 
-    <h4>Spellcasting Ability</h4>
-        <p>At 1st level, you know two 1st-level spells of your choice from the warlock spell list.</p>
-        <p>The Spells Known column of Table: The Warlock shows when you learn more warlock spells of your choice of 1st level and higher.</p>
-        <p>A spell you choose must be of a level no higher than what’s shown in the table’s Slot Level column for your level.</p>
-        <p>When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level. Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots.</p>
+            <h4 class="m-2 font-black border-b border-black">Spellcasting Focus</h4>
+                <p>You can use an arcane focus as a spellcasting focus for your warlock spells.<p>
 
-    <h4>Spellcasting Focus</h4>
-        <p>You can use an arcane focus as a spellcasting focus for your warlock spells.<p>
+    </div>
+    <div class="shadow-xl p-4 bg-white">
+        <div class="Proficiencies mb-5 ">
+            <h2 class="font-black text-center text-lg border-b border-black"> Class Proficiencies </h2>
+            <p><span class="font-black">Armor:</span> Light armor</p>
+            <p><span class="font-black">Weapons:</span> Simple weapons</p>
+            <p><span class="font-black">Tools:</span> None</p>
+            <p><span class="font-black">Saving Throws:</span> Wisdom, Charisma</p>
+            <p><span class="font-black">Skills:</span> Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion</p>
+        </div>
+
+
+
 
 

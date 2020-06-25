@@ -1,33 +1,31 @@
-<table>
-    <tr>
-        <td>{{ addProficientBonus character.charStr 1}}</td>
-        <td>{{ addProficientBonus character.charDex 1}}</td>
-        <td>{{ statModifiers character.charCon}}</td>
-        <td>{{ statModifiers character.charInt}}</td>
-        <td>{{ statModifiers character.charWis}}</td>
-        <td>{{ statModifiers character.charCha}}</td>
-    </tr>
-    <tr>
-        <th>STR</th>
-        <th>DEX</th>
-        <th>CON</th>
-        <th>INT</th>
-        <th>WIS</th>
-        <th>CHA</th>
-    </tr>
-</table>
-<h2> Class Proficiencies </h2>
-        <p>Armor: None</p>
-        <p>Weapons: Simple weapons, shortswords</p>
-        <p>Tools: Choose one type of artisan’s tools or one musical instrument</p>
-        <p>Saving Throws: Strength, Dexterity</p>
-        <p>Skills: Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth</p>
-        <br>
-    <h2> Class Features </h2>
-    <h3> Unarmored Defense </h3>
+    <div>
+        <h2  class="font-black text-center text-lg">Saves</h2>
+        <table class="flex justify-center">
+            <tr class="text-center">
+                <td class="w-16">{{ addProficientBonus character.charStr 1}}</td>
+                <td class="w-16">{{ addProficientBonus character.charDex 1}}</td>
+                <td class="w-16">{{ statModifiers character.charCon}}</td>
+                <td class="w-16">{{ statModifiers character.charInt}}</td>
+                <td class="w-16">{{ statModifiers character.charWis}}</td>
+                <td class="w-16">{{ statModifiers character.charCha}}</td>
+            </tr>
+            <tr>
+                <th class="w-16">STR</th>
+                <th class="w-16">DEX</th>
+                <th class="w-16">CON</th>
+                <th class="w-16">INT</th>
+                <th class="w-16">WIS</th>
+                <th class="w-16">CHA</th>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="grid grid-cols-2 col-gap-2 mt-8">
+    <div class="Features shadow-xl p-4 bg-white">
+        <h2 class="font-black text-center text-xl"> Class Features </h2>
+    <h3 class="font-black text-lg m-2 border-b border-black"> Unarmored Defense </h3>
         <p>Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier.<p>
-        <br>
-    <h3> Martial Arts <h3>
+    <h3 class="font-black text-lg m-2 border-b border-black"> Martial Arts </h3>
      <p> At 1st level, your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are shortswords and any simple melee weapons that don’t have the two- handed or heavy property. </p>
      <p> You gain the following benefits while you are unarmed or wielding only monk weapons and you aren’t wearing armor or wielding a shield: </p>
      <ul>
@@ -39,3 +37,16 @@
      <p> Certain monasteries use specialized forms of the monk weapons. </p>
      <p> For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). </p>
      <p> Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon. </p>
+
+    </div>
+    <div class="shadow-xl p-4 bg-white">
+        <div class="Proficiencies mb-5 ">
+        <h2 class="font-black text-center text-lg border-b border-black"> Class Proficiencies </h2>
+            <p><span class="font-black">Armor:</span> None</p>
+            <p><span class="font-black">Weapons:</span> Simple weapons, shortswords</p>
+            <p><span class="font-black">Tools:</span> Choose one type of artisan’s tools or one musical instrument</p>
+            <p><span class="font-black">Saving Throws:</span> Strength, Dexterity</p>
+            <p><span class="font-black">Skills:</span> Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth</p>
+        </div>
+
+    

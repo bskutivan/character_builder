@@ -1,70 +1,81 @@
-        <table>
-            <tr> 
-                <td>{{ getSpellSave 1 character.charCha }}</td>
-                <td>{{ getSpellAttack 1 character.charCha }}</td>
+  <table>
+        <tr class="text-center"> 
+            <td>{{ getSpellSave 1 character.charCha }}</td>
+            <td>{{ getSpellAttack 1 character.charCha }}</td>
+        </tr>
+        <tr>
+            <th>Spell Save</th>
+            <th>Spell Attack</th>
+        </tr>
+    </table>
+    <div>
+        <h2  class="font-black text-center text-lg">Saves</h2>
+        <table class="flex justify-center">
+            <tr class="text-center">
+                <td class="w-16">{{ statModifiers character.charStr}}</td>
+                <td class="w-16">{{ statModifiers character.charDex}}</td>
+                <td class="w-16">{{ addProficientBonus character.charCon 1}}</td>
+                <td class="w-16">{{ statModifiers character.charInt}}</td>
+                <td class="w-16">{{ statModifiers character.charWis}}</td>
+                <td class="w-16">{{ addProficientBonus character.charCha 1}}</td>
             </tr>
             <tr>
-                <th>Spell Save</th>
-                <th>Spell Attack</th>
+                <th class="w-16">STR</th>
+                <th class="w-16">DEX</th>
+                <th class="w-16">CON</th>
+                <th class="w-16">INT</th>
+                <th class="w-16">WIS</th>
+                <th class="w-16">CHA</th>
             </tr>
-
         </table>
-<table>
-    <tr>
-        <td>{{ statModifiers character.charStr}}</td>
-        <td>{{ statModifiers character.charDex}}</td>
-        <td>{{ addProficientBonus character.charCon 1}}</td>
-        <td>{{ statModifiers character.charInt}}</td>
-        <td>{{ statModifiers character.charWis}}</td>
-        <td>{{ addProficientBonus character.charCha 1}}</td>
-    </tr>
-    <tr>
-        <th>STR</th>
-        <th>DEX</th>
-        <th>CON</th>
-        <th>INT</th>
-        <th>WIS</th>
-        <th>CHA</th>
-    </tr>
-</table>
-<h2> Class Proficiencies </h2>
-    <p>Armor: None</p>
-    <p>Weapons: Daggers, darts, slings, quarterstaffs, light crossbows</p>
-    <p>Tools: None</p>
-    <p>Saving Throws: Constitution, Charisma</p>
-    <p>Skills: Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, and Religion</p>
+    </div>
+</div>
+<div class="grid grid-cols-2 col-gap-2 mt-8">
+    <div class="Features shadow-xl p-4 bg-white">
+        <h2 class="font-black text-center text-xl"> Class Features </h2>
 
-<h2> Class Features </h2>
+        <h3 class="font-black text-lg m-2 border-b border-black"> Spellcasting </h3>
+            <p>An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells.</p>
 
-<h3> Spellcasting </h3>
-    <p>An event in your past, or in the life of a parent or ancestor, left an indelible mark on you, infusing you with arcane magic. This font of magic, whatever its origin, fuels your spells.</p>
+            <h4 class="m-2 font-black border-b border-black"> Cantrips </h4>
+                <p>At 1st level, you know four cantrips of your choice from the sorcerer spell list.</p>
+                <p>You learn additional sorcerer cantrips of your choice at higher levels, as shown in the Cantrips Known column of Table: The Sorcerer.</p>
 
-    <h4> Cantrips </h4>
-        <p>At 1st level, you know four cantrips of your choice from the sorcerer spell list.</p>
-        <p>You learn additional sorcerer cantrips of your choice at higher levels, as shown in the Cantrips Known column of Table: The Sorcerer.</p>
+            <h4 class="m-2 font-black border-b border-black">Spell Slots</h4>
+                <p>Table: The Sorcerer shows how many spell slots you have to cast your spells of 1st level and higher.</p>
+                <p>To cast one of these sorcerer spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.</p>
 
-    <h4>Spell Slots</h4>
-        <p>Table: The Sorcerer shows how many spell slots you have to cast your spells of 1st level and higher.</p>
-        <p>To cast one of these sorcerer spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.</p>
+                <p>For example, if you know the 1st-level spell burning hands and have a 1st-level and a 2nd-level spell slot available, you can cast burning hands using either slot.</p>
 
-        <p>For example, if you know the 1st-level spell burning hands and have a 1st-level and a 2nd-level spell slot available, you can cast burning hands using either slot.</p>
+            <h4 class="m-2 font-black border-b border-black"> Spells Known </h4>
+                <p>You know two 1st-level spells of your choice from the sorcerer spell list.</p>
+                <p>The Spells Known column of Table: The Sorcerer shows when you learn more sorcerer spells of your choice.</p>
+                <p>Each of these spells must be of a level for which you have spell slots. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level.</p>
 
-    <h4> Spells Known </h4>
-        <p>You know two 1st-level spells of your choice from the sorcerer spell list.</p>
-        <p>The Spells Known column of Table: The Sorcerer shows when you learn more sorcerer spells of your choice.</p>
-        <p>Each of these spells must be of a level for which you have spell slots. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level.</p>
+                <p>Additionally, when you gain a level in this class, you can choose one of the sorcerer spells you know and replace it with another spell from the sorcerer spell list, which also must be of a level for which you have spell slots.</p>
 
-        <p>Additionally, when you gain a level in this class, you can choose one of the sorcerer spells you know and replace it with another spell from the sorcerer spell list, which also must be of a level for which you have spell slots.</p>
+            <h4 class="m-2 font-black border-b border-black"> Spell casting ability </h4>
+                <p>Charisma is your spellcasting ability for your sorcerer spells, since the power of your magic relies on your ability to project your will into the world.</p>
+                <p>You use your Charisma whenever a spell refers to your spellcasting ability.</p>
+                <p>In addition, you use your Charisma modifier when setting the saving throw DC for a sorcerer spell you cast and when making an attack roll with one.</p>
 
-    <h4> Spell casting ability <h4>
-        <p>Charisma is your spellcasting ability for your sorcerer spells, since the power of your magic relies on your ability to project your will into the world.</p>
-        <p>You use your Charisma whenever a spell refers to your spellcasting ability.</p>
-        <p>In addition, you use your Charisma modifier when setting the saving throw DC for a sorcerer spell you cast and when making an attack roll with one.</p>
+                <p>Spell save DC = 8 + your proficiency bonus + your Charisma modifier</p>
+            <h4 class="m-2 font-black border-b border-black"> Spellcasting Focus </h4>
+                <p> You can use an arcane focus as a spellcasting focus for your sorcerer spells. </p>
+        <h3 class="font-black text-lg m-2 border-b border-black"> Sorcerous Origin </h3>
+            <p>Choose a sorcerous origin, which describes the source of your innate magical power.</p>
 
-        <p>Spell save DC = 8 + your proficiency bonus + your Charisma modifier</p>
-    <h4> Spellcasting Focus <h4>
-        <p> You can use an arcane focus as a spellcasting focus for your sorcerer spells. </p>
-<h3> Sorcerous Origin </h3>
-    <p>Choose a sorcerous origin, which describes the source of your innate magical power.</p>
+            <p>Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.</p>
 
-    <p>Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.</p>
+    </div>
+    <div class="shadow-xl p-4 bg-white">
+        <div class="Proficiencies mb-5 ">
+            <h2 class="font-black text-center text-lg border-b border-black"> Class Proficiencies </h2>
+                <p><span class="font-black">Armor:</span> None</p>
+                <p><span class="font-black">Weapons:</span> Daggers, darts, slings, quarterstaffs, light crossbows</p>
+                <p><span class="font-black">Tools:</span> None</p>
+                <p><span class="font-black">Saving Throws:</span> Constitution, Charisma</p>
+                <p><span class="font-black">Skills:</span> Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, and Religion</p>
+        </div>
+
+

@@ -1,50 +1,61 @@
-<table>
-    <tr>
-        <td>{{ addProficientBonus character.charStr 1}}</td>
-        <td>{{ statModifiers character.charDex}}</td>
-        <td>{{ addProficientBonus character.charCon 1}}</td>
-        <td>{{ statModifiers character.charInt}}</td>
-        <td>{{ statModifiers character.charWis}}</td>
-        <td>{{ statModifiers character.charCha}}</td>
-    </tr>
-    <tr>
-        <th>STR</th>
-        <th>DEX</th>
-        <th>CON</th>
-        <th>INT</th>
-        <th>WIS</th>
-        <th>CHA</th>
-    </tr>
-</table>
-<h2> Class Proficiencies </h2>
-    <p><span>Armor:</span> All armor, shields</p>
-    <p><span>Weapons:</span> Simple weapons, martial weapons</p>
-    <p><span>Tools:</span> None</p>
-    <p><span>Saving Throws:</span> Strength, Constitution</p>
-    <p><span>Skills:</span> Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival</p>
+    <div>
+        <h2  class="font-black text-center text-lg">Saves</h2>
+        <table class="flex justify-center">
+            <tr class="text-center">
+                <td class="w-16">{{ addProficientBonus character.charStr 1}}</td>
+                <td class="w-16">{{ statModifiers character.charDex}}</td>
+                <td class="w-16">{{ addProficientBonus character.charCon 1}}</td>
+                <td class="w-16">{{ statModifiers character.charInt}}</td>
+                <td class="w-16">{{ statModifiers character.charWis}}</td>
+                <td class="w-16">{{ statModifiers character.charCha}}</td>
+            </tr>
+            <tr>
+                <th class="w-16">STR</th>
+                <th class="w-16">DEX</th>
+                <th class="w-16">CON</th>
+                <th class="w-16">INT</th>
+                <th class="w-16">WIS</th>
+                <th class="w-16">CHA</th>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="grid grid-cols-2 col-gap-2 mt-8">
+    <div class="Features shadow-xl p-4 bg-white">
+        <h2 class="font-black text-center text-xl"> Class Features </h2>
+
+        <h3 class="font-black text-lg m-2 border-b border-black">Fighting Style</h3>
+            <p>You adopt a particular style of fighting as your specialty.</p>
+            <p>Choose one of the following options.</p>
+            <p>You can’t take a Fighting Style option more than once, even if you later get to choose again.</p>
             
-<h2> Class Features </h2>
+        <h4 class="m-2 font-black border-b border-black">Archery</h4>
+            <p>You gain a +2 bonus to attack rolls you make with ranged weapons.</p>
 
-<h3>Fighting Style</h3>
-    <p>You adopt a particular style of fighting as your specialty.</p>
-    <p>Choose one of the following options.</p>
-    <p>You can’t take a Fighting Style option more than once, even if you later get to choose again.</p>
-    
-<h4>Archery</h4>
-    <p>You gain a +2 bonus to attack rolls you make with ranged weapons.</p>
+        <h4 class="m-2 font-black border-b border-black">Defense</h4>
+            <p>While you are wearing armor, you gain a +1 bonus to AC.</p>
+            
+        <h4 class="m-2 font-black border-b border-black">Dueling</h4>
 
-<h4>Defense</h4>
-    <p>While you are wearing armor, you gain a +1 bonus to AC.</p>
-    
-<h4>Dueling</h4>
+            <p>When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</p>
+            
+        <h4 class="m-2 font-black border-b border-black">Two-Weapon Fighting</h4>
 
-    <p>When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</p>
+            <p>When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.</p>
+            
+        <h3 class="font-black text-lg m-2 border-b border-black">Second Wind</h3>
+            <p>You have a limited well of stamina that you can draw on to protect yourself from harm.</p>
+            <p>On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.</p>
+            <p>Once you use this feature, you must finish a short or long rest before you can use it again.</p>
+    </div>
+    <div class="shadow-xl p-4 bg-white">
+        <div class="Proficiencies mb-5">
+            <h2 class="font-black text-center text-lg border-b border-black"> Class Proficiencies </h2>
+            <p><span class="font-black">Armor:</span> All armor, shields</p>
+            <p><span class="font-black">Weapons:</span> Simple weapons, martial weapons</p>
+            <p><span class="font-black">Tools:</span> None</p>
+            <p><span class="font-black">Saving Throws:</span> Strength, Constitution</p>
+            <p><span class="font-black">Skills:</span>  Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival</p>
+        </div>
     
-<h4>Two-Weapon Fighting</h4>
-
-    <p>When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.</p>
     
-<h3>Second Wind</h3>
-    <p>You have a limited well of stamina that you can draw on to protect yourself from harm.</p>
-    <p>On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.</p>
-    <p>Once you use this feature, you must finish a short or long rest before you can use it again.</p>

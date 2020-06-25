@@ -1,46 +1,55 @@
-<table>
-    <tr>
-        <td>{{ statModifiers character.charStr}}</td>
-        <td>{{ statModifiers character.charDex}}</td>
-        <td>{{ statModifiers character.charCon}}</td>
-        <td>{{ statModifiers character.charInt}}</td>
-        <td>{{ addProficientBonus character.charWis 1}}</td>
-        <td>{{ addProficientBonus character.charCha 1}}</td>
-    </tr>
-    <tr>
-        <th>STR</th>
-        <th>DEX</th>
-        <th>CON</th>
-        <th>INT</th>
-        <th>WIS</th>
-        <th>CHA</th>
-    </tr>
-</table>
-<h2> Class Proficiencies </h2>
-    <p>Armor: All armor, shields</p>
-    <p>Weapons: Simple weapons, martial weapons</p>
-    <p>Tools: None</p>
-    <p>Saving Throws: Wisdom, Charisma</p>
-    <p>Skills: Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion</p>
+    <div>
+        <h2 class="font-black text-center text-lg">Saves</h2>
+        <table class="flex justify-center">
+            <tr class="text-center">
+                <td class="w-16">{{ statModifiers character.charStr}}</td>
+                <td class="w-16">{{ statModifiers character.charDex}}</td>
+                <td class="w-16">{{ statModifiers character.charCon}}</td>
+                <td class="w-16">{{ statModifiers character.charInt}}</td>
+                <td class="w-16">{{ addProficientBonus character.charWis 1}}</td>
+                <td class="w-16">{{ addProficientBonus character.charCha 1}}</td>
+            </tr>
+            <tr>
+                <th class="w-16">STR</th>
+                <th class="w-16">DEX</th>
+                <th class="w-16">CON</th>
+                <th class="w-16">INT</th>
+                <th class="w-16">WIS</th>
+                <th class="w-16">CHA</th>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="grid grid-cols-2 col-gap-2 mt-8">
+    <div class="Features shadow-xl p-4 bg-white">
+         <h2 class="font-black text-center text-xl"> Class Features </h2>
 
-<h2> Class Features </h2>
-
-<h3> Divine Sense </h3>
-    <p>The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears.</p>
-    <p>As an action, you can open your awareness to detect such forces. </p>
-    <p>Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover.</p>
-    <p>You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity.</p>
-    <p>Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the hallow spell.</p>
-    
-    <p>You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.</p>
-    
-<h3>Lay on Hands</h3>
-    <p>Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest.</p>
-    <p>With that pool, you can restore a total number of hit points equal to your paladin level × 5.</p>
-    
-    <p>As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.</p>
-    
-    <p>Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it.</p>
-    <p>You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.</p>
-    
-    <p>This feature has no effect on undead and constructs.</p>
+            <h3 class="font-black text-lg m-2 border-b border-black"> Divine Sense </h3>
+                <p>The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears.</p>
+                <p>As an action, you can open your awareness to detect such forces. </p>
+                <p>Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover.</p>
+                <p>You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity.</p>
+                <p>Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the hallow spell.</p>
+                
+                <p>You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.</p>
+                
+            <h3 class="font-black text-lg m-2 border-b border-black">Lay on Hands</h3>
+                <p>Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest.</p>
+                <p>With that pool, you can restore a total number of hit points equal to your paladin level × 5.</p>
+                
+                <p>As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.</p>
+                
+                <p>Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it.</p>
+                <p>You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.</p>
+                
+                <p>This feature has no effect on undead and constructs.</p>
+    </div>
+    <div class="shadow-xl p-4 bg-white">
+        <div class="Proficiencies mb-5 ">
+            <h2 class="font-black text-center text-lg border-b border-black"> Class Proficiencies </h2>
+            <p><span class="font-black">Armor:</span> All armor, shields</p>
+            <p><span class="font-black">Weapons:</span> Simple weapons, martial weapons</p>
+            <p><span class="font-black">Tools:</span> None</p>
+            <p><span class="font-black">Saving Throws:</span> Wisdom, Charisma</p>
+            <p><span class="font-black">Skills:</span> Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion</p>
+        </div>
