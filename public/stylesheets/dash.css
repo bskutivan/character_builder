@@ -8,7 +8,7 @@ body{
     background-color: rgb(94, 9, 9);
 }
 header {
-        background-image: url("./images/background-1.jpg");
+        background-image: url("../images/background-1.jpg");
         background-size: 1000px;
         height: 400px;
         width:1370px;
@@ -59,6 +59,27 @@ header nav ul li a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 28px;
 }
+
+footer {
+    background:rgb(36, 1, 7);
+    width:100%;
+    padding: 40px 35px;
+    margin-top: 500px;
+  }
+  footer h2 {
+    color: rgb(151, 73, 73);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+  }
+  
+  footer p {
+    color: rgb(196, 169, 169);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 25px;
+  }
+  
 
 
 
