@@ -18,10 +18,12 @@
             <tr>
                 <td>{{ getHp character.charCon character.charClass }}</td>
                 <td>{{ proficiencyBonus 1 }}</td>
+                <td>{{ statModifiers character.charDex }}</td>
             </tr>
             <tr>
                 <th>HP</th>
                 <th>Proficiency Bonus</th>
+                <th>Initiative</th>
             </tr>
         </table>
         <table>
@@ -61,18 +63,14 @@
                 <td>{{ statModifiers character.charCha }}</td>
             </tr>
         </table>
-        <div>
-            <h4>Initiative</h4>
-            <p>{{ statModifiers character.charDex }}</p>
-        </div>
         <table>
             <tr>
                 <td>{{ addProficientBonus character.charStr 1 }}</td>
                 <td>{{ addProficientBonus character.charDex 1 }}</td>
             </tr>
             <tr>
-                <th>Attack Bonus(Normal)</th>
-                <th>Attack Bonus(Finesse)</th>
+                <th>Attack Bonus</th>
+                <th>Finesse Bonus</th>
             </tr>
         </table>
             {{#if Barbarian}}
@@ -125,7 +123,7 @@
 
 
         <div>
-            {{#getRaceInfo charRace}}
+            {{#getRaceInfo character.charRace}}
             {{/getRaceInfo}}
         </div>
     </div>

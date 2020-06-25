@@ -1,3 +1,32 @@
+        <table>
+            <tr> 
+                <td>{{ getSpellSave 1 character.charCha }}</td>
+                <td>{{ getSpellAttack 1 character.charCha }}</td>
+            </tr>
+            <tr>
+                <th>Spell Save</th>
+                <th>Spell Attack</th>
+            </tr>
+
+        </table>
+<table>
+    <tr>
+        <td>{{ statModifiers character.charStr}}</td>
+        <td>{{ statModifiers character.charDex}}</td>
+        <td>{{ statModifiers character.charCon}}</td>
+        <td>{{ statModifiers character.charInt}}</td>
+        <td>{{ addProficientBonus character.charWis 1}}</td>
+        <td>{{ addProficientBonus character.charCha 1}}</td>
+    </tr>
+    <tr>
+        <th>STR</th>
+        <th>DEX</th>
+        <th>CON</th>
+        <th>INT</th>
+        <th>WIS</th>
+        <th>CHA</th>
+    </tr>
+</table>
 <h2> Class Proficiencies </h2>
     <p>Weapons: Simple weapons</p>
     <p>Tools: None</p>

@@ -49,12 +49,6 @@ function statModifiers(Num) {
     return modifier
 }
 
-function getspellBonus(stat, level) {
-    const statbonus = statModifiers(stat);
-    const profMod = proficiencyBonus(level);
-    return statbonus + profMod + 8;
-}
-
 function getHp(Con, Class) {
     const conMod = statModifiers(Con);
      var hp;
