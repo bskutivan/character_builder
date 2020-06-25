@@ -1,31 +1,30 @@
 {
-    "name": "character-builder",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node server.js"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/bskutivan/character_builder.git"
-    },
-    "author": "",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/bskutivan/character_builder/issues"
-    },
-    "homepage": "https://github.com/bskutivan/character_builder#readme",
-    "dependencies": {
-      "bcrypt": "^5.0.0",
-      "connect-session-sequelize": "^6.1.1",
-      "dotenv": "^8.2.0",
-      "express": "^4.17.1",
-      "express-handlebars": "^4.0.4",
-      "express-session": "^1.17.1",
-      "mysql2": "^2.1.0",
-      "sequelize": "^5.21.13"
-    }
+  "name": "character-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bskutivan/character_builder.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bskutivan/character_builder/issues"
+  },
+  "homepage": "https://github.com/bskutivan/character_builder#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^6.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.13"
   }
-  
+}
