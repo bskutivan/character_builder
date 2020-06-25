@@ -1,46 +1,56 @@
-<table>
-    <tr>
-        <td>{{ addProficiencyBonus character.charStr 1}}</td>
-        <td>{{ statModifiers character.charDex}}</td>
-        <td>{{ addProficiencyBonus character.charCon 1}}</td>
-        <td>{{ statModifiers character.charInt}}</td>
-        <td>{{ statModifiers character.charWis}}</td>
-        <td>{{ statModifiers character.charCha}}</td>
-    </tr>
-    <tr>
-        <th>STR</th>
-        <th>DEX</th>
-        <th>CON</th>
-        <th>INT</th>
-        <th>WIS</th>
-        <th>CHA</th>
-    </tr>
-</table>
+    <div>
+        <h2  class="font-black text-center text-lg">Saves</h2>
+        <table class="flex justify-center">
+            <tr class="text-center">
+                <td class="w-16">{{ addProficientBonus character.charStr 1}}</td>
+                <td class="w-16">{{ statModifiers character.charDex}}</td>
+                <td class="w-16">{{ addProficientBonus character.charCon 1}}</td>
+                <td class="w-16">{{ statModifiers character.charInt}}</td>
+                <td class="w-16">{{ statModifiers character.charWis}}</td>
+                <td class="w-16">{{ statModifiers character.charCha}}</td>
+            </tr>
+            <tr class="text-center">
+                <th class="w-16">STR</th>
+                <th class="w-16">DEX</th>
+                <th class="w-16">CON</th>
+                <th class="w-16">INT</th>
+                <th class="w-16">WIS</th>
+                <th class="w-16">CHA</th>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="grid grid-cols-2 col-gap-2 mt-8">
+    <div class="Features shadow-xl p-4 bg-white">
+        <h2 class="font-black text-center text-xl"> Class Features </h2>
 
-<h2> Class Proficiencies </h2>
-            <p>Armor: Light armor, medium armor, shields</p>
-            <p>Weapons: Simple weapons, martial weapons</p>
-            <p>Tools: None</p>
-            <p>Saving Throws: Strength, Constitution</p>
-            <p>Skills: Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival</p>
-        
-<h2> Class Features </h2>
+        <h3 class="font-black text-lg m-2 border-b border-black"> Rage </h3>
+            <p>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.</p>
 
-    <h3> Rage </h3>
-        <p>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.</p>
+            <p>While raging, you gain the following benefits if you aren’t wearing heavy armor:</p>
+            <ul>
+                <li>You have advantage on Strength checks and Strength saving throws.</li>
+                <li>When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.</li>
+                <li>You have resistance to bludgeoning, piercing, and slashing damage.</li>
+                <li>If you are able to cast spells, you can’t cast them or concentrate on them while raging.</li>
+            <ul>
+            
+            <p>Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven’t attacked a hostile creature since your last turn or taken damage since then.</p>
+            <p>You can also end your rage on your turn as a bonus action.</p>
+            
+            <p>Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.</p>
+            
+        <h3 class="font-black text-lg m-2 border-b border-black"> Unarmored Defense </h3>
+            <p> While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit. </p>
 
-        <p>While raging, you gain the following benefits if you aren’t wearing heavy armor:</p>
-        <ul>
-            <li>You have advantage on Strength checks and Strength saving throws.</li>
-            <li>When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.</li>
-            <li>You have resistance to bludgeoning, piercing, and slashing damage.</li>
-            <li>If you are able to cast spells, you can’t cast them or concentrate on them while raging.</li>
-        <ul>
-        
-        <p>Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven’t attacked a hostile creature since your last turn or taken damage since then.</p>
-        <p>You can also end your rage on your turn as a bonus action.</p>
-        
-        <p>Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.</p>
-        
-    <h3> Unarmored Defense </h3>
-        <p> While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit. </p>
+    </div>
+    <div class="shadow-xl p-4 bg-white">
+        <div class="Proficiencies mb-5">
+            <h2 class="font-black text-center text-lg border-b border-black"> Class Proficiencies </h2>
+                <p><span class="font-black">Armor:</span> Light armor, medium armor, shields</p>
+                <p><span class="font-black">Weapons:</span> Simple weapons, martial weapons</p>
+                <p><span class="font-black">Tools:</span> None</p>
+                <p><span class="font-black">Saving Throws:</span> Strength, Constitution</p>
+                <p><span class="font-black">Skills:</span> Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival</p>
+            </div>
+    
