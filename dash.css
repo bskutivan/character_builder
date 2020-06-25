@@ -5,26 +5,31 @@
 
 body{
 
-    background-image: url("images/background-3.jpg");
-    background-size: 1400px;
+    background-color: rgb(94, 9, 9);
 }
 header {
-    padding: 20px 35px;  /*applies 20px to every side of teh box */
-    background-color:#0b8f9e;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
+        background-image: url("./images/background-1.jpg");
+        background-size: 1000px;
+        height: 400px;
+        width:1370px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding: 20px 35px;  /*applies 20px to every side of teh box */
+        background-color:#0b8f9e;
+        font-family: Arial, Helvetica, sans-serif;
+        }
 header h1 {
     font-weight: bold;
     font-size: 32px;
-    color: #9c3900;
+    color: white;
     margin:0;
     display: inline;
     font-family: Arial, Helvetica, sans-serif;
 }
 header a {
     text-decoration: none;
-    color: rgb(145, 53, 1);
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -47,6 +52,23 @@ header nav ul li a {
     font-family: Arial, Helvetica, sans-serif;
 
 }
+
+
+.container  h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {

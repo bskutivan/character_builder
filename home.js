@@ -9,3 +9,9 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
+function loginRedirect() {
+	location.replace("dash.html")
+  }
+  function createAccount() {
+	location.replace("dash.html")
+  }
