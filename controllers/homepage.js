@@ -17,6 +17,10 @@ router.get('/:id',(req, res) => {
             res.render('Character', {character: character, Wizard: true});
         } else if (character.charClass === "Bard") {
             res.render('Character', {character: character, Bard: true});
+        } else if (character.charClass === "Cleric") {
+            res.render('Character', {character: character, Cleric: true});
+        } else if (character.charClass === "Druid") {
+            res.render('Character', {character: character, Druid: true});
         }
 
     })

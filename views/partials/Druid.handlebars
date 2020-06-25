@@ -1,64 +1,67 @@
-        <table>
-            <tr> 
-                <td>{{ getSpellSave 1 character.charWis }}</td>
-                <td>{{ getSpellAttack 1 character.charWis }}</td>
+    <table>
+        <tr class="text-center"> 
+            <td>{{ getSpellSave 1 character.charWis }}</td>
+            <td>{{ getSpellAttack 1 character.charWis }}</td>
+        </tr>
+        <tr>
+            <th>Spell Save</th>
+            <th>Spell Attack</th>
+        </tr>
+    </table>
+    <div>
+        <h2 class="font-black text-center text-lg">Saves</h2>
+        <table class="flex justify-center">
+            <tr class="text-center">
+                <td class="w-16">{{ statModifiers character.charStr}}</td>
+                <td class="w-16">{{ statModifiers character.charDex}}</td>
+                <td class="w-16">{{ statModifiers character.charCon}}</td>
+                <td class="w-16">{{ addProficientBonus character.charInt 1}}</td>
+                <td class="w-16">{{ addProficientBonus character.charWis 1}}</td>
+                <td class="w-16">{{ statModifiers character.charCha}}</td>
             </tr>
             <tr>
-                <th>Spell Save</th>
-                <th>Spell Attack</th>
+                <th class="w-16">STR</th>
+                <th class="w-16">DEX</th>
+                <th class="w-16">CON</th>
+                <th class="w-16">INT</th>
+                <th class="w-16">WIS</th>
+                <th class="w-16">CHA</th>
             </tr>
-
         </table>
-<table>
-    <tr>
-        <td>{{ statModifiers character.charStr}}</td>
-        <td>{{ statModifiers character.charDex}}</td>
-        <td>{{ statModifiers character.charCon}}</td>
-        <td>{{ addProficientBonus character.charInt 1}}</td>
-        <td>{{ addProficientBonus character.charWis 1}}</td>
-        <td>{{ statModifiers character.charCha}}</td>
-    </tr>
-    <tr>
-        <th>STR</th>
-        <th>DEX</th>
-        <th>CON</th>
-        <th>INT</th>
-        <th>WIS</th>
-        <th>CHA</th>
-    </tr>
-</table>
-<h2> Class Proficiencies </h2>
-    <p>Armor: Light armor, medium armor, shields</p>
-    <p>Weapons: Simple weapons, martial weapons</p>
-    <p>Tools: None</p>
-    <p>Saving Throws: Strength, Dexterity</p>
-    <p>Skills: Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival</p>
+    </div>
+</div>
+<div class="grid grid-cols-2 col-gap-2 mt-8">
+    <div class="Features shadow-xl p-4 bg-white">
+        <h2 class="font-black text-center text-xl"> Class Features </h2>
 
-<h2> Class Features </h2>
-
-<h3> Favored Enemy </h3>
-    <p>Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.</p>
-
-    <p> Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead.</p>
-    <p> Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.</p>
-
-    <p> You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.</p>
-
-    <p> When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.</p>
-
-    <p> You choose one additional favored enemy, as well as an associated language, at 6th and 14th level.</p>
-    <p> As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.</p>
-<h3> Natural Explorer </h3>
-    <p>You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions.
-    <p>Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.
-
-    <p>While traveling for an hour or more in your favored terrain, you gain the following benefits:
-    <ul>
-        <li>Difficult terrain doesn’t slow your group’s travel.</li>
-        <li>Your group can’t become lost except by magical means.</li>
-        <li>Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.</li>
-        <li>If you are traveling alone, you can move stealthily at a normal pace.</li>
-        <li>When you forage, you find twice as much food as you normally would.</li>
-        <li>While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</li>
-    </ul>
-    <p>You choose additional favored terrain types at 6th and 10th level<p>
+        <h3 class="font-black text-lg m-2 border-b border-black"> Favored Enemy </h3>
+            <p>Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy.</p>
+            <p> Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead.</p>
+            <p> Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies.</p>
+            <p> You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.</p>
+            <p> When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all.</p>
+            <p> You choose one additional favored enemy, as well as an associated language, at 6th and 14th level.</p>
+            <p> As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.</p>
+        <h3 class="font-black text-lg m-2 border-b border-black"> Natural Explorer </h3>
+            <p>You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions.</p>
+            <p>Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, or swamp. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.</p>
+            <p>While traveling for an hour or more in your favored terrain, you gain the following benefits:</p>
+            <ul class="list-disc ml-5">
+                <li>Difficult terrain doesn’t slow your group’s travel.</li>
+                <li>Your group can’t become lost except by magical means.</li>
+                <li>Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.</li>
+                <li>If you are traveling alone, you can move stealthily at a normal pace.</li>
+                <li>When you forage, you find twice as much food as you normally would.</li>
+                <li>While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</li>
+            </ul>
+            <p>You choose additional favored terrain types at 6th and 10th level</p>
+    </div>
+<div class="p-4 shadow-xl bg-white">
+    <div class="Proficiencies mb-5">
+        <h2 class="font-black text-center text-xl border-b border-black"> Class Proficiencies </h2>
+            <p><span class="font-black">Armor:</span> Light armor, medium armor, shields</p>
+            <p><span class="font-black">Weapons:</span> Simple weapons, martial weapons</p>
+            <p><span class="font-black">Tools:</span> None</p>
+            <p><span class="font-black">Saving Throws:</span> Strength, Dexterity</p>
+            <p><span class="font-black">Skills:</span> Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival</p>
+    </div>

@@ -1,78 +1,82 @@
 <section class="character-sheet">
     <div class="character-info">
-        <table>
-            <tr class="text-center space-x-4">
-                <td>{{ character.charName }}</td>
-                <td>{{ character.charRace }}</td>
-                <td>{{ character.charClass }}</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <th>Race</th>
-                <th>Class</th>
-                <th>Level</th>
-            </tr>
-        </table>
-        <table>
-            <tr class="text-center">
-                <td>{{ getHp character.charCon character.charClass }}</td>
-                <td>{{ proficiencyBonus 1 }}</td>
-                <td>{{ statModifiers character.charDex }}</td>
-            </tr>
-            <tr>
-                <th>HP</th>
-                <th>Proficiency Bonus</th>
-                <th>Initiative</th>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <th>Attribute</th>
-                <th>Score</th>
-                <th>Modifiers</th>
-            </tr>
-            <tr class="text-center">
-                <td>Strength:</td>
-                <td>{{ character.charStr }}</td>
-                <td>{{ statModifiers character.charStr }}</td>
-            </tr>
-            <tr class="text-center">
-                <td>Dexterity:</td>
-                <td>{{ character.charDex }}</td>
-                <td>{{ statModifiers character.charDex }}</td>
-            </tr>
-            <tr class="text-center">
-                <td>Constitution:</td>
-                <td>{{ character.charCon }}</td>
-                <td>{{ statModifiers character.charCon }}</td>
-            </tr>
-            <tr class="text-center">
-                <td>Intelligence:</td>
-                <td>{{ character.charInt }}</td>
-                <td>{{ statModifiers character.charInt }}</td>
-            </tr>
-            <tr class="text-center">
-                <td>Wisdom:</td>
-                <td>{{ character.charWis }}</td>
-                <td>{{ statModifiers character.charWis }}</td>
-            </tr>
-            <tr class="text-center">
-                <td>Charisma</td>
-                <td> {{ character.charCha }} </td>
-                <td>{{ statModifiers character.charCha }}</td>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <td>{{ addProficientBonus character.charStr 1 }}</td>
-                <td>{{ addProficientBonus character.charDex 1 }}</td>
-            </tr>
-            <tr>
-                <th>Attack Bonus</th>
-                <th>Finesse Bonus</th>
-            </tr>
-        </table>
+        <div class="grid grid-cols-2 col-gap-6 bg-white p-8">
+            <table class="shadow-xl">
+                <tr class="flex-1 text-center">
+                    <td class="w-32">{{ character.charName }}</td>
+                    <td class="w-32">{{ character.charRace }}</td>
+                    <td class="w-32">{{ character.charClass }}</td>
+                    <td class="w-32">1</td>
+                </tr>
+                <tr class="flex-1 flex-row">
+                    <th class="w-32 border-t border-black">Name</th>
+                    <th class="w-32 border-t border-black">Race</th>
+                    <th class="w-32 border-t border-black">Class</th>
+                    <th class="w-32 border-t border-black">Level</th>
+                </tr>
+            </table>
+            <table class="shadow-xl">
+                <tr class="text-center flex-1">
+                    <td class="w-32">{{ getHp character.charCon character.charClass }}</td>
+                    <td class="w-40">{{ proficiencyBonus 1 }}</td>
+                    <td class="w-32">{{ statModifiers character.charDex }}</td>
+                </tr>
+                <tr class="text-center flex-1">
+                    <th class="w-32 border-t border-black">HP</th>
+                    <th class="w-40 border-t border-black">Proficiency Bonus</th>
+                    <th class="w-32 border-t border-black">Initiative</th>
+                </tr>
+            </table>
+        </div>
+        <div class="grid grid-flow-col grid-col-2 grid-rows-3 gap-2 items-center shadow-xl bg-white pb-8">
+            <table class="row-span-3">
+                <tr>
+                    <th>Attribute</th>
+                    <th>Score</th>
+                    <th>Modifiers</th>
+                </tr>
+                <tr class="text-center">
+                    <td>Strength:</td>
+                    <td>{{ character.charStr }}</td>
+                    <td>{{ statModifiers character.charStr }}</td>
+                </tr>
+                <tr class="text-center">
+                    <td>Dexterity:</td>
+                    <td>{{ character.charDex }}</td>
+                    <td>{{ statModifiers character.charDex }}</td>
+                </tr>
+                <tr class="text-center">
+                    <td>Constitution:</td>
+                    <td>{{ character.charCon }}</td>
+                    <td>{{ statModifiers character.charCon }}</td>
+                </tr>
+                <tr class="text-center">
+                    <td>Intelligence:</td>
+                    <td>{{ character.charInt }}</td>
+                    <td>{{ statModifiers character.charInt }}</td>
+                </tr>
+                <tr class="text-center">
+                    <td>Wisdom:</td>
+                    <td>{{ character.charWis }}</td>
+                    <td>{{ statModifiers character.charWis }}</td>
+                </tr>
+                <tr class="text-center">
+                    <td>Charisma</td>
+                    <td> {{ character.charCha }} </td>
+                    <td>{{ statModifiers character.charCha }}</td>
+                </tr>
+            </table>
+            <table>
+                <tr class="text-center">
+                    <td>{{ addProficientBonus character.charStr 1 }}</td>
+                    <td>{{ addProficientBonus character.charDex 1 }}</td>
+                </tr>
+                <tr>
+                    <th>Attack Bonus</th>
+                    <th>Finesse Bonus</th>
+                </tr>
+            </table>
+        
             {{#if Barbarian}}
             {{> Barbarian}}
             {{/if}}
@@ -122,9 +126,11 @@
             {{/if}}
 
 
-        <div>
-            {{#getRaceInfo character.charRace}}
-            {{/getRaceInfo}}
+                <div class="col-2">
+                    {{#getRaceInfo character.charRace}}
+                    {{/getRaceInfo}}
+                </div>
+            </div>
         </div>
     </div>
 </section>

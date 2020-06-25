@@ -108,26 +108,26 @@ handlebars.registerHelper("getRaceInfo", function(Race) {
         `
     } else if (Race === "Elf") {
         return `
-        <h2> ${Race} Info </h2>
-            <p><span>Ability Score Increase:</span> Your Dexterity score increases by 2.</p>
+        <h2 class="font-black text-center text-lg m-2 border-b border-black"> ${Race} Racial Info </h2>
+            <p class="m-2"><span class="font-black">Ability Score Increase:</span> Your Dexterity score increases by 2.</p>
 
-            <p><span>Age:</span> Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.</p>
+            <p class="m-2"><span class="font-black">Age:</span> Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.</p>
             
-            <p><span>Alignment:</span> Elves love freedom, variety, and self- expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others’ freedom as well as their own, and they are more often good than not. The drow are an exception; their exile has made them vicious and dangerous. Drow are more often evil than not.</p>
+            <p class="m-2"><span class="font-black">Alignment:</span> Elves love freedom, variety, and self- expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others’ freedom as well as their own, and they are more often good than not. The drow are an exception; their exile has made them vicious and dangerous. Drow are more often evil than not.</p>
             
-            <p><span>Size:</span> Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.</p>
+            <p class="m-2"><span class="font-black">Size:</span> Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.</p>
             
-            <p><span>Speed:</span> Your base walking speed is 30 feet.</p>
+            <p class="m-2"><span class="font-black">Speed:</span> Your base walking speed is 30 feet.</p>
             
-            <p><span>Darkvision:</span> Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+            <p class="m-2"><span class="font-black">Darkvision:</span> Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
             
-            <p><span>Keen Senses:</span> You have proficiency in the Perception skill.</p>
+            <p class="m-2"><span class="font-black">Keen Senses:</span> You have proficiency in the Perception skill.</p>
             
-            <p><span>Fey Ancestry:</span> You have advantage on saving throws against being charmed, and magic can’t put you to sleep.</p>
+            <p class="m-2"><span class="font-black">Fey Ancestry:</span> You have advantage on saving throws against being charmed, and magic can’t put you to sleep.</p>
             
-            <p><span>Trance:</span> Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.</p>
+            <p class="m-2"><span class="font-black">Trance:</span> Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.</p>
             
-            <p><span>Languages:</span> You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.</p>
+            <p class="m-2"><span class="font-black">Languages:</span> You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.</p>
         `
     } else if (Race === "Halfling") {
         return `

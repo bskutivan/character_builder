@@ -1,77 +1,79 @@
      
-        <table>
-            <tr> 
-                <td>{{ getSpellSave 1 character.charInt }}</td>
-                <td>{{ getSpellAttack 1 character.charInt }}</td>
-            </tr>
-            <tr>
-                <th>Spell Save</th>
-                <th>Spell Attack</th>
-            </tr>
+            <table>
+                <tr class="text-center"> 
+                    <td>{{ getSpellSave 1 character.charInt }}</td>
+                    <td>{{ getSpellAttack 1 character.charInt }}</td>
+                </tr>
+                <tr>
+                    <th>Spell Save</th>
+                    <th>Spell Attack</th>
+                </tr>
 
-        </table>
-        <table>
-            <h3>Saves</h3>
-            <tr>
-                <td>{{ statModifiers character.charStr}}</td>
-                <td>{{ statModifiers character.charDex}}</td>
-                <td>{{ statModifiers character.charCon}}</td>
-                <td>{{ addProficientBonus character.charInt 1}}</td>
-                <td>{{ addProficientBonus character.charWis 1}}</td>
-                <td>{{ statModifiers character.charCha}}</td>
-            </tr>
-            <tr>
-                <th>STR</th>
-                <th>DEX</th>
-                <th>CON</th>
-                <th>INT</th>
-                <th>WIS</th>
-                <th>CHA</th>
-            </tr>
-            
-        </table>
-        
-
-     <div class="Proficiencies">
-            <h2>Class Proficiencies</h2>
-                <p><span>Armor:</span> None</p>
-                <p><span>Weapons:</span> Daggers, darts, slings, quarterstaffs, light crossbows</p>
-                <p><span>Tools:</span> None</p>
-                <p><span>Saving Throws:</span> Intelligence, Wisdom</p>
-                <p><span>Skills:</span> Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion</p>
+            </table>
+         <div>
+            <h2 class="font-black text-center text-lg">Saves</h2>
+            <table class="flex justify-center">
+                <tr class="text-center">
+                    <td class="w-16">{{ statModifiers character.charStr}}</td>
+                    <td class="w-16">{{ statModifiers character.charDex}}</td>
+                    <td class="w-16">{{ statModifiers character.charCon}}</td>
+                    <td class="w-16">{{ addProficientBonus character.charInt 1}}</td>
+                    <td class="w-16">{{ addProficientBonus character.charWis 1}}</td>
+                    <td class="w-16">{{ statModifiers character.charCha}}</td>
+                </tr>
+                <tr>
+                    <th class="w-16">STR</th>
+                    <th class="w-16">DEX</th>
+                    <th class="w-16">CON</th>
+                    <th class="w-16">INT</th>
+                    <th class="w-16">WIS</th>
+                    <th class="w-16">CHA</th>
+                </tr>
+            </table>
         </div>
-        <div class="Features">
-            <h2>Class Features<h2>
-                <h3>Spellcasting</h3>
+    </div>
+    <div class="grid grid-cols-2 col-gap-2 mt-8">
+        <div class="Features shadow-xl p-4 bg-white">
+            <h2 class="font-black text-center text-xl">Class Features<h2>
+                <h3 class="font-black text-lg m-2 border-b border-black">Spellcasting</h3>
                     <p>As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power.</p>
-                <h5>Cantrips</h5>
+                <h4 class="m-2 font-black border-b border-black">Cantrips</h4>
                     <p>At 1st level, you know three cantrips of your choice from the wizard spell list.</p>
                     <p>You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table.</p>
 
-                <h5>Spellbook</h5>
+                <h4 class="m-2 font-black border-b border-black">Spellbook</h4>
                     <p>At 1st level, you have a spellbook containing six 1st- level wizard spells of your choice.</p>
                     <p>Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind.</p>
-                <h5>Preparing and Casting Spells</h5>
+                <h4 class="m-2 font-black border-b border-black">Preparing and Casting Spells</h4>
                     <p>Table: The Wizard shows how many spell slots you have to cast your spells of 1st level and higher.
                     <p>To cast one of these spells, you must expend a slot of the spell’s level or higher.
                     <p>You regain all expended spell slots when you finish a long rest.
                     <p>You prepare the list of wizard spells that are available for you to cast.
                     <p>To do so, choose a number of wizard spells from your spellbook equal to your Intelligence modifier + your wizard level (minimum of one spell). The spells must be of a level for which you have spell slots.</p>
                     <p>You can change your list of prepared spells when you finish a long rest. Preparing a new list of wizard spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list.</p>
-                <h5>Spellcasting Ability</h5>
+                <h4 class="m-2 font-black border-b border-black">Spellcasting Ability</h4>
                     <p>Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.</p>
                     <p>Spell save DC = 8 + your proficiency bonus + your Intelligence modifier</p>
                     <p>Spell attack modifier = your proficiency bonus + your Intelligence modifier</p>
-                <h5>Ritual Casting</h5>
+                <h4 class="m-2 font-black border-b border-black">Ritual Casting</h4>
                     <p>You can cast a wizard spell as a ritual if that spell has the ritual tag and you have the spell in your spellbook. You don’t need to have the spell prepared.</p>
-                <h5>Spellcasting Focus</h5>
+                <h4 class="m-2 font-black border-b border-black">Spellcasting Focus</h4>
                     <p>You can use an arcane focus as a spellcasting focus for your wizard spells.</p>
-                <h5>Learning Spells of 1st Level and Higher</h5>
+                <h4 class="m-2 font-black border-b border-black">Learning Spells of 1st Level and Higher</h4>
                     <p>Each time you gain a wizard level, you can add two wizard spells of your choice to your spellbook for free. Each of these spells must be of a level for which you have spell slots, as shown on the Wizard table. On your adventures, you might find other spells that you can add to your spellbook (see “Your Spellbook”).</p>
-                <h3>Arcane Recovery</h3>
+                <h3 class="font-black text-lg m-2 border-b border-black">Arcane Recovery</h3>
                     <p>You have learned to regain some of your magical energy by studying your spellbook.</p>
                     <p>Once per day when you finish a short rest, you can choose expended spell slots to recover.</p>
                     <p>The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.</p>
 
                     <p>For example, if you’re a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.</p>
         </div>
+        <div class="p-4 shadow-xl bg-white">
+            <div class="Proficiencies mb-5">
+            <h2 class="font-black text-center text-xl border-b border-black">Class Proficiencies</h2>
+                <p><span class="font-black">Armor:</span> None</p>
+                <p><span class="font-black">Weapons:</span> Daggers, darts, slings, quarterstaffs, light crossbows</p>
+                <p><span class="font-black">Tools:</span> None</p>
+                <p><span class="font-black">Saving Throws:</span> Intelligence, Wisdom</p>
+                <p><span class="font-black">Skills:</span> Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion</p>
+            </div>
