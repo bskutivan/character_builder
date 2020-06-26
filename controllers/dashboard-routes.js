@@ -38,7 +38,7 @@ router.get('/', withAuth, (req,res) => {
 
 router.get('/new', (req, res) => {
     res.render('new-character', {
-        style: 'dash.css'
+        style: '../../stylesheets/dash.css'
     });
 });
 
