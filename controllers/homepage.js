@@ -5,9 +5,11 @@ const {Character, User } = require('../models')
 router.get('/', (req, res) => {
     Character.findAll({
         attributes: [
+            'id',
             'charName',
             'charRace',
             'charClass',
+            'charCon',
             'created_at'
         ],
         include: [
