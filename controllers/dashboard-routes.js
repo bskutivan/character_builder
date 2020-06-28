@@ -28,7 +28,7 @@ router.get('/', withAuth, (req,res) => {
         res.render('dashboard', { 
             characters, 
             loggedIn: true,
-            style: 'dash.css'
+            style: '../../stylesheets/dash.css'
         })
     })
     .catch(err => {
@@ -43,4 +43,42 @@ router.get('/new', (req, res) => {
     });
 });
 
+router.get('/edit/:id', withAuth, (req, res) => {
+    Character.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: [
+            'id',
+            'charName',
+            'charRace',
+            'charClass',
+            'charStr',
+            'charDex',
+            'charCon',
+            'charInt',
+            'charWis',
+            'charCha',
+            'created_at'
+        ]
+    })
+    .then(dbCharacterData => {
+        if (!dbCharacterData) {
+            res.status(404).json({ message: 'No character found with this id.' });
+            return;
+        }
+
+        const character = dbCharacterData.get({ plain: true});
+
+        res.render('edit-character', {
+            character,
+            loggedIn: req.session.loggedIn,
+            style: '../../../stylesheets/dash.css'
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+})
 module.exports = router;
