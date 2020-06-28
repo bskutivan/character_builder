@@ -17,7 +17,7 @@ header nav {
 }
 
 header{
-background-image: url("../images/background-4.jpg");
+background-image: linear-gradient(0deg, #9b2c2c, rgba(255, 255, 255, 0.1)), url("../images/background-4.jpg");
 background-size: 1600px;
 height: 300px;
 background-size: cover;

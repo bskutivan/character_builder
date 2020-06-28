@@ -8,7 +8,7 @@ body{
     background-color: rgb(94, 9, 9);
 }
 header {
-        background-image: url("../images/background-1.jpg");
+        background-image: linear-gradient(0deg, rgb(94, 9, 9), rgba(255, 255, 255, 0.1)), url("../images/background-1.jpg");
         background-size: 1000px;
         height: 400px;
         background-size: cover;
