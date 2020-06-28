@@ -59,29 +59,29 @@ router.get('/:id',(req, res) => {
         const character = dbData.get({plain: true});
         // check class, this generates the right partials.
         if(character.charClass === "Wizard") {
-            res.render('Character', {character: character, Wizard: true, style: 'style.css'});
+            res.render('character', {character: character, Wizard: true, style: 'style.css'});
         } else if (character.charClass === "Bard") {
-            res.render('Character', {character: character, Bard: true, style: 'style.css'});
+            res.render('character', {character: character, Bard: true, style: 'style.css'});
         } else if (character.charClass === "Cleric") {
-            res.render('Character', {character: character, Cleric: true, style: 'style.css'});
+            res.render('character', {character: character, Cleric: true, style: 'style.css'});
         } else if (character.charClass === "Druid") {
-            res.render('Character', {character: character, Druid: true, style: 'style.css'});
+            res.render('character', {character: character, Druid: true, style: 'style.css'});
         } else if (character.charClass === "Barbarian") {
-            res.render('Character', {character: character, Barbarian: true, style: 'style.css'});
+            res.render('character', {character: character, Barbarian: true, style: 'style.css'});
         } else if (character.charClass === "Fighter") {
-            res.render('Character', {character: character, Fighter: true, style: 'style.css'});
+            res.render('character', {character: character, Fighter: true, style: 'style.css'});
         } else if (character.charClass === "Monk") {
-            res.render('Character', {character: character, Monk: true, style: 'style.css'});
+            res.render('character', {character: character, Monk: true, style: 'style.css'});
         } else if (character.charClass === "Paladin") {
-            res.render('Character', {character: character, Paladin: true, style: 'style.css'});
+            res.render('character', {character: character, Paladin: true, style: 'style.css'});
         } else if (character.charClass === "Ranger") {
-            res.render('Character', {character: character, Ranger: true, style: 'style.css'});
+            res.render('character', {character: character, Ranger: true, style: 'style.css'});
         } else if (character.charClass === "Rogue") {
-            res.render('Character', {character: character, Rogue: true, style: 'style.css'});
+            res.render('character', {character: character, Rogue: true, style: 'style.css'});
         } else if (character.charClass === "Sorcerer") {
-            res.render('Character', {character: character, Sorcerer: true, style: 'style.css'});
+            res.render('character', {character: character, Sorcerer: true, style: 'style.css'});
         } else if (character.charClass === "Warlock") {
-            res.render('Character', {character: character, Warlock: true, style: 'style.css'})
+            res.render('character', {character: character, Warlock: true, style: 'style.css'})
         } else {
             res.status(400).json({ message: "An Error getting Class info"})
         }
