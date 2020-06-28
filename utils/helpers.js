@@ -312,7 +312,7 @@ handlebars.registerHelper("getRaceInfo", function(Race) {
             
         <p class="m-2"><span class="font-black">Hellish Resistance:</span> You have resistance to fire damage.</p>
             
-        <p class="m-2"><span class="font-black">Infernal Legacy. You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.</p>
+        <p class="m-2"><span class="font-black">Infernal Legacy:</span> You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.</p>
             
         <p class="m-2"><span class="font-black">Languages:</span> You can speak, read, and write Common and Infernal.</p>
         `
