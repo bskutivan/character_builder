@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+  background-color: rgb(230, 210, 210);
+}
+
+header nav {
+    margin: 7px 0;
+    display: inline;
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+    
+
+}
+
+header{
+background-image: url("../images/background-4.jpg");
+background-size: 1600px;
+height: 300px;
+background-size: cover;
+background-position: center;
+position: relative;
+padding: 20px 35px;  /*applies 20px to every side of teh box */
+background-color:#0b8f9e;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 32px;
+    color: #9c3900;
+    margin:0;
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header a {
+    text-decoration: none;
+    color: rgb(173, 59, 6);
+    text-shadow: 2px 2px black;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+header nav {
+    float:right; /*similar to text wrapping property in docs or word */
+    margin: 7px 0; /* margin adds space to the top and bottom and 0 represents the spaces to the right and left */
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+}
+header nav ul li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* .container{
+background-color: rgb(36, 1, 7);
+text-align: center;
+font-size: 35px;
+color: white;
+margin-top: 600px;
+padding: 0 100px 0px 100px;
+border-bottom: 3px solid;
+}
+.container h2 {
+    color: rgb(151, 73, 73);
+}
+.container p {
+    color: rgb(196, 169, 169);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+} */
+
+footer {
+  background:rgb(36, 1, 7);
+  width:100%;
+  padding: 40px 35px;
+  bottom: 0;
+
+}
+footer h2 {
+  color: rgb(151, 73, 73);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+}
+
+footer p {
+  color: rgb(196, 169, 169);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* FIGHTER */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1eaea;
+  color: rgb(121, 22, 22);
+  min-width: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+/* WIZARD */
+.dropdown-2 {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  left: 200px;
+}
+
+.dropdown-content-2 {
+  display: none;
+  position: absolute;
+  background-color: #f1eaea;
+  color: rgb(121, 22, 22);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown-2:hover .dropdown-content-2 {
+  display: block;
+}
+
+.desc-2 {
+  padding: 15px;
+  text-align: center;
+}
+
+
+/* Cleric */
+
+.dropdown-3 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: -30px;
+  
+}
+
+.dropdown-content-3 {
+  display: none;
+  position: absolute;
+  background-color: #f1eaea;
+  color: rgb(121, 22, 22);
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown-3:hover .dropdown-content-3 {
+  display: block;
+}
+
+.desc-3 {
+  padding: 50px;
+  text-align: center;
+
+}
+
+
+/* Rogue */
+.dropdown-4 {
+  position: relative;
+  display: inline-block;
+  margin-top: 400px;
+  left: 200px;
+  
+}
+
+.dropdown-content-4 {
+  display: none;
+  position: absolute;
+  background-color: #f1eaea;
+  color: rgb(121, 22, 22);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown-4:hover .dropdown-content-4 {
+  display: block;
+}
+
+.desc-4 {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Ranger */
+.dropdown-5 {
+  position: relative;
+  display: inline-block;
+  margin-top: 300px;
+  left: 500px;
+}
+
+.dropdown-content-5 {
+  display: none;
+  position: absolute;
+  background-color: #f1eaea;
+  color: rgb(121, 22, 22);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown-5:hover .dropdown-content-5 {
+  display: block;
+}
+
+.desc-5 {
+  padding: 15px;
+  text-align: center;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+    @media screen and (max-width: 300px) {
+      .cancelbtn, .signupbtn {
+         width: 100%;
+      }
+    }
+
+

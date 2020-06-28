@@ -3,7 +3,6 @@ const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 
 async function loginFormHandler(event) {
-	event.preventDefault();
 
 	const username = document.querySelector('#username-login').value.trim();
 	const password = document.querySelector('#password-login').value.trim();
@@ -26,11 +25,13 @@ async function loginFormHandler(event) {
 	}
 }
 
-async function signUpFormHandler() {
+async function signUpFormHandler(event) {
 
 	const username = document.querySelector('#username-signup').value.trim();
 	const password = document.querySelector('#password-signup').value.trim();
 
+	console.log(username);
+	console.log(password);
 	if(username && password) {
 		const response = await fetch('/api/users', {
 			method: 'post',
@@ -42,6 +43,7 @@ async function signUpFormHandler() {
 		});
 
 		if (response.ok) {
+			console.log('success')
 			document.location.replace('/dashboard');
 		} else {
 			alert(response.statusText);
