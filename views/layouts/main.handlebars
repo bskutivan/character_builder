@@ -20,7 +20,7 @@
           <li>
             <!-- Anchor element -->
             {{#if loggedIn}}
-              <a href="#">Logout</a>
+              <a href="" id="logout">Logout</a>
             {{else}}
             <a href="/login">Login</a>
             {{/if}}
@@ -47,6 +47,8 @@
       </div>
     </footer>
   </section>
-
+      {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+      {{/if}}
   </body>
 </html>

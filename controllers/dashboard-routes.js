@@ -13,6 +13,7 @@ router.get('/', withAuth, (req,res) => {
             'charName',
             'charRace',
             'charClass',
+            'charCon',
             'created_at'
         ],
         include: [
