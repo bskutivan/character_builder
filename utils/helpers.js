@@ -83,7 +83,7 @@ function getSpellAttack(level, stat){
 handlebars.registerHelper("getRaceInfo", function(Race) {
     if (Race === "Dwarf") {
         return `
-        <h2> ${Race} Info </h2>
+        <h2 class="font-black text-center text-lg m-2 border-b border-black"> ${Race} Info </h2>
         <p class="m-2"><span class="font-black">Ability Score Increase:</span> Your Constitution score increases by 2.
 
         <p class="m-2"><span class="font-black">Age:</span> Dwarves mature at the same rate as humans, but they’re considered young until they reach the age of 50. On average, they live about 350 years.</p>
@@ -131,7 +131,7 @@ handlebars.registerHelper("getRaceInfo", function(Race) {
         `
     } else if (Race === "Halfling") {
         return `
-        <h2> ${Race} Info </h2>
+        <h2 class="font-black text-center text-lg m-2 border-b border-black"> ${Race} Info </h2>
         <p class="m-2"><span class="font-black">Ability Score Increase:</span> Your Dexterity score increases by 2.</p>
 
         <p class="m-2"><span class="font-black">Age:</span> A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.</p>
@@ -152,7 +152,7 @@ handlebars.registerHelper("getRaceInfo", function(Race) {
         `
     } else if (Race === "Human") {
         return `
-        <h2> ${Race} Info </h2>
+        <h2 class="font-black text-center text-lg m-2 border-b border-black"> ${Race} Info </h2>
         <p class="m-2"><span class="font-black">Ability Score Increase:</span> Your ability scores each increase by 1.</p>
 
         <p class="m-2"><span class="font-black">Age:</span> Humans reach adulthood in their late teens and live less than a century.</p>
@@ -167,7 +167,7 @@ handlebars.registerHelper("getRaceInfo", function(Race) {
         `
     } else if (Race === "Dragonborn") {
         return `
-        <h2> ${Race} Info </h2>
+        <h2 class="font-black text-center text-lg m-2 border-b border-black"> ${Race} Info </h2>
         <p class="m-2"><span class="font-black">Ability Score Increase:</span> Your Strength score increases by 2, and your Charisma score increases by 1.</p>
 
         <p class="m-2"><span class="font-black">Age:</span> Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.</p>
@@ -262,7 +262,7 @@ handlebars.registerHelper("getRaceInfo", function(Race) {
         `
     } else if (Race === "Half-Elf") {
         return `
-        <h2> ${Race} Info </h2>
+        <h2 class="font-black text-center text-lg m-2 border-b border-black"> ${Race} Info </h2>
         <p class="m-2"><span class="font-black">Ability Score Increase:</span> Your Charisma score increases by 2, and two other ability scores of your choice increase by 1.</p>
     
         <p class="m-2"><span class="font-black">Age:</span> Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years.</p>
@@ -283,7 +283,7 @@ handlebars.registerHelper("getRaceInfo", function(Race) {
         `
     } else if (Race === "Half-Orc") {
         return `
-        <h2> ${Race} Info </h2>
+        <h2 class="font-black text-center text-lg m-2 border-b border-black"> ${Race} Info </h2>
         <p class="m-2"><span class="font-black">Ability Score Increase:</span> Your Strength score increases by 2, and your Constitution score increases by 1.</p>
         <p class="m-2"><span class="font-black">Age:</span> Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.</p>
         <p class="m-2"><span class="font-black">Alignment:</span> Half-orcs inherit a tendency toward chaos from their orc parents and are not strongly inclined toward good. Half-orcs raised among orcs and willing to live out their lives among them are usually evil.</p>
@@ -297,7 +297,7 @@ handlebars.registerHelper("getRaceInfo", function(Race) {
         `
     } else if (Race === "Tiefling") {
         return `
-        <h2> ${Race} Info </h2>
+        <h2 class="font-black text-center text-lg m-2 border-b border-black"> ${Race} Info </h2>
         <p class="m-2"><span class="font-black">Ability Score Increase:</span> Your Intelligence score increases by 1, and your Charisma score increases by 2.</p>
 
         <p class="m-2"><span class="font-black">Age:</span> Tieflings mature at the same rate as humans but live a few years longer.</p>
@@ -318,7 +318,7 @@ handlebars.registerHelper("getRaceInfo", function(Race) {
         `
     } else if (Race === "Gnome") {
         return `
-        <h2> ${Race} Info </h2>
+        <h2 class="font-black text-center text-lg m-2 border-b border-black"> ${Race} Info </h2>
         <p class="m-2"><span class="font-black">Ability Score Increase:</span> Your Intelligence score increases by 2.</p>
 
         <p class="m-2"><span class="font-black">Age:</span> Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.</p>
