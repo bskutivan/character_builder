@@ -1,8 +1,11 @@
+// for overlay transition
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 
 async function loginFormHandler(event) {
+
+	event.preventDefault();
 
 	const username = document.querySelector('#username-login').value.trim();
 	const password = document.querySelector('#password-login').value.trim();
@@ -27,11 +30,11 @@ async function loginFormHandler(event) {
 
 async function signUpFormHandler(event) {
 
+	event.preventDefault();
+
 	const username = document.querySelector('#username-signup').value.trim();
 	const password = document.querySelector('#password-signup').value.trim();
 
-	console.log(username);
-	console.log(password);
 	if(username && password) {
 		const response = await fetch('/api/users', {
 			method: 'post',
@@ -61,5 +64,3 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 
 });
-
-document.querySelector('.form-container').addEventListener('submit', loginFormHandler);
