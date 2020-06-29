@@ -33,4 +33,4 @@
   ![](https://github.com/bskutivan/character_builder/blob/master/screenshots/Screenshot3.png) 
 
   ## Questions
-  If you have any questions about the repository, contact me directly at bskutivan@gmail.com. You can find more of my work at https://github.com/bskutivan.
+  If you have any questions about the repository, contact us directly at bskutivan@gmail.com, k3ckl3y.a@gmail.com. You can find more of my work at https://github.com/bskutivan.
