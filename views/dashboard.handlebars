@@ -5,10 +5,10 @@
   <div class="mx-10">
     <h2 class="font-black text-center text-3xl text-white">Your Characters!</h2>
    {{#each characters as |character| }}
-      <div class="p-8">
+      <div class="p-1 mb-3 md:p-8">
         <a href="/{{character.id}}">
-            <div class="grid grid-cols-2">
-                <table class="shadow-lg  bg-white">
+            <div class="grid grid-cols-1 md:grid-cols-2 mb-2 bg-gray-200">
+                <table class="shadow-lg  bg-white mb-2 p-2">
                     <tr class="flex-1 text-center">
                         <td class="w-32">{{ character.charName }}</td>
                         <td class="w-32">{{ character.charRace }}</td>
