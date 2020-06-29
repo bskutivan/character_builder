@@ -1,5 +1,4 @@
 # Character Builder
-  ![Github licence]MIT
   ## Description
   This projects goal was to strengthen full-stack development skills while building a helpful tool that allows new and old players of dungeons and dragons to create characters, share characters, and save characters.
   ## Table of Contents
