@@ -27,6 +27,7 @@
   We are looking for advice or input on future developments. We currently plan to intergrate the Skills model,comment functionality, upvote functionality, and further incorporate Dungeons and Dragons 5E rules/information.
   ## Tests
   Currently no tests have been run for this project.</br>
+  Presentation: https://docs.google.com/presentation/d/1xyxA0GK3B88xl7nyMgicrx2vxfGNEjaXGckT2C8AVVo/edit?usp=sharing </br>
   Screenshots:
   ![](https://github.com/bskutivan/character_builder/blob/master/screenshots/Screenshot1.png)
   ![](https://github.com/bskutivan/character_builder/blob/master/screenshots/Screenshot2.png)
