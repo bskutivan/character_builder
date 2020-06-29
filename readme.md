@@ -27,11 +27,11 @@
   ## Contributing
   We are looking for advice or input on future developments. We currently plan to intergrate the Skills model,comment functionality, upvote functionality, and further incorporate Dungeons and Dragons 5E rules/information.
   ## Tests
-  Currently no tests have been run for this project.
+  Currently no tests have been run for this project.</br>
   Screenshots:
-  ![](https://github.com/bskutivan/National-Park-Planner/blob/master/screenshots/Screenshot1.png)
-  ![](https://github.com/bskutivan/National-Park-Planner/blob/master/screenshots/Screenshot2.png)
-  ![](https://github.com/bskutivan/National-Park-Planner/blob/master/screenshots/Screenshot3.png) 
+  ![](https://github.com/bskutivan/character_builder/blob/master/screenshots/Screenshot1.png)
+  ![](https://github.com/bskutivan/character_builder/blob/master/screenshots/Screenshot2.png)
+  ![](https://github.com/bskutivan/character_builder/blob/master/screenshots/Screenshot3.png) 
 
   ## Questions
   If you have any questions about the repository, contact me directly at bskutivan@gmail.com. You can find more of my work at https://github.com/bskutivan.
