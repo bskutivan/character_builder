@@ -29,5 +29,9 @@
   ## Tests
   Currently no tests have been run for this project.
   Screenshots:
+  ![](https://github.com/bskutivan/National-Park-Planner/blob/master/screenshots/Screenshot1.png)
+  ![](https://github.com/bskutivan/National-Park-Planner/blob/master/screenshots/Screenshot2.png)
+  ![](https://github.com/bskutivan/National-Park-Planner/blob/master/screenshots/Screenshot3.png) 
+
   ## Questions
   If you have any questions about the repository, contact me directly at bskutivan@gmail.com. You can find more of my work at https://github.com/bskutivan.
